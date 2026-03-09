@@ -1,2 +1,2 @@
 # Manila-CI
-Pure Storage OpenStack CI store for Manila jobs
+Everpure OpenStack CI store for Manila jobs
