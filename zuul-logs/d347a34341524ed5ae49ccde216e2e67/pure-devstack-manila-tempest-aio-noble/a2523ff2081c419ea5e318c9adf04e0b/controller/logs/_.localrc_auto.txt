@@ -1,0 +1,104 @@
+# Generated file, do not edit
+disable_all_services
+enable_service c-api
+enable_service c-bak
+enable_service c-sch
+enable_service c-vol
+disable_service cinder
+disable_service dstat
+enable_service etcd3
+enable_service file_tracker
+enable_service g-api
+disable_service horizon
+enable_service key
+enable_service memory_tracker
+enable_service mysql
+enable_service n-api
+enable_service n-api-meta
+enable_service n-cond
+enable_service n-cpu
+enable_service n-novnc
+enable_service n-sch
+enable_service openstack-cli-server
+enable_service ovn-controller
+enable_service ovn-northd
+enable_service ovs-vswitchd
+enable_service ovsdb-server
+enable_service placement-api
+enable_service q-ovn-metadata-agent
+enable_service q-svc
+enable_service rabbit
+disable_service s-account
+disable_service s-container
+disable_service s-object
+disable_service s-proxy
+enable_service tempest
+enable_service tls-proxy
+ACTIVE_TIMEOUT="500"
+ADMIN_PASSWORD="secretadmin"
+API_RATE_LIMIT="False"
+ASSOCIATE_TIMEOUT="500"
+BOOT_TIMEOUT="500"
+BUILD_TIMEOUT="500"
+DATABASE_PASSWORD="secretdatabase"
+DEBUG="True"
+DEBUG_LIBVIRT_COREDUMPS="True"
+ENABLE_SYSCTL_MEM_TUNING="True"
+ENABLE_SYSCTL_NET_TUNING="True"
+ENABLE_ZSWAP="True"
+ERROR_ON_CLONE="True"
+FIXED_RANGE="10.1.0.0/20"
+FLOATING_RANGE="172.24.5.0/24"
+GLANCE_ENABLE_QUOTAS="False"
+HOST_IP="192.168.1.112"
+IMAGE_URLS="http://download.cirros-cloud.net/0.6.2/cirros-0.6.2-x86_64-disk.img, http://download.cirros-cloud.net/0.6.1/cirros-0.6.1-x86_64-disk.img"
+IPV4_ADDRS_SAFE_TO_USE="10.1.0.0/20"
+LIBVIRT_TYPE="qemu"
+LOGFILE="/opt/stack/logs/devstacklog.txt"
+LOG_COLOR="False"
+MANILA_ALLOW_NAS_SERVER_PORTS_ON_HOST="True"
+MANILA_CONFIGURE_DEFAULT_TYPES="True"
+MANILA_DEFAULT_SHARE_TYPE_EXTRA_SPECS="snapshot_support=True create_share_from_snapshot_support=False revert_to_snapshot_support=True"
+MANILA_ENABLED_BACKENDS="flashblade"
+MANILA_INSTALL_TEMPEST_PLUGIN_SYSTEMWIDE="False"
+MANILA_OPTGROUP_flasharray_driver_handles_share_servers="False"
+MANILA_OPTGROUP_flasharray_flasharray_api="a2fbcd5e-fdd5-29c8-727c-91cd35cdbeee"
+MANILA_OPTGROUP_flasharray_flasharray_eradicate="True"
+MANILA_OPTGROUP_flasharray_flasharray_file_vip="10.241.127.21"
+MANILA_OPTGROUP_flasharray_flasharray_mgmt_vip="cinder-fa2.dev.purestorage.com"
+MANILA_OPTGROUP_flasharray_share_driver="manila.share.drivers.purestorage.flasharray.FlashArrayShareDriver"
+MANILA_OPTGROUP_flashblade_driver_handles_share_servers="False"
+MANILA_OPTGROUP_flashblade_flashblade_api="T-e832bb16-76fc-4f88-99f2-92a877b0bf58"
+MANILA_OPTGROUP_flashblade_flashblade_data_vip="10.241.128.51"
+MANILA_OPTGROUP_flashblade_flashblade_eradicate="True"
+MANILA_OPTGROUP_flashblade_flashblade_mgmt_vip="10.241.127.17"
+MANILA_OPTGROUP_flashblade_share_driver="manila.share.drivers.purestorage.flashblade.FlashBladeShareDriver"
+MANILA_REPLICA_STATE_UPDATE_INTERVAL="10"
+MANILA_SERVER_MIGRATION_PERIOD_TASK_INTERVAL="10"
+MANILA_SERVICE_VM_FLAVOR_RAM="1024"
+MANILA_SHARE_BACKEND1_NAME="flashblade"
+MANILA_SHARE_BACKEND2_NAME="flasharray"
+MANILA_SHARE_MIGRATION_PERIOD_TASK_INTERVAL="1"
+MANILA_USE_DOWNGRADE_MIGRATIONS="True"
+NETWORK_GATEWAY="10.1.0.1"
+NOVA_LIBVIRT_TB_CACHE_SIZE="128"
+NOVA_VNC_ENABLED="True"
+NOVNC_FROM_PACKAGE="True"
+OVN_DBS_LOG_LEVEL="dbg"
+PUBLIC_BRIDGE_MTU="1500"
+PUBLIC_NETWORK_GATEWAY="172.24.5.1"
+RABBIT_PASSWORD="secretrabbit"
+SERVICE_HOST="192.168.1.112"
+SERVICE_PASSWORD="secretservice"
+SWIFT_HASH="1234123412341234"
+SWIFT_REPLICAS="1"
+SWIFT_START_ALL_SERVICES="False"
+TERMINATE_TIMEOUT="500"
+USE_PYTHON3="True"
+VERBOSE="True"
+VERBOSE_NO_TIMESTAMP="True"
+LIBS_FROM_GIT=cinder,devstack,glance,keystone,manila,manila-tempest-plugin,neutron,nova,os-test-images,placement,python-manilaclient,requirements,swift,tempest
+TEMPEST_PLUGINS="/opt/stack/manila-tempest-plugin"
+enable_plugin manila https://opendev.org/openstack/manila
+enable_plugin manila-tempest-plugin https://opendev.org/openstack/manila-tempest-plugin
+
