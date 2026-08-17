@@ -1,0 +1,115 @@
+{
+  "services": [
+    {
+      "service": "devstack@openstack-cli-server.service",
+      "MemoryCurrent": 99143680
+    },
+    {
+      "service": "devstack@file_tracker.service",
+      "MemoryCurrent": 602112
+    },
+    {
+      "service": "devstack@memory_tracker.service",
+      "MemoryCurrent": 1163264
+    },
+    {
+      "service": "devstack@etcd.service",
+      "MemoryCurrent": 136306688
+    },
+    {
+      "service": "devstack@keystone.service",
+      "MemoryCurrent": 255795200
+    },
+    {
+      "service": "apache2.service",
+      "MemoryCurrent": 8450048
+    }
+  ],
+  "db": [
+    {
+      "db": "keystone",
+      "op": "SELECT",
+      "count": 17250
+    },
+    {
+      "db": "keystone",
+      "op": "INSERT",
+      "count": 78
+    },
+    {
+      "db": "keystone",
+      "op": "UPDATE",
+      "count": 1
+    },
+    {
+      "db": "neutron",
+      "op": "DESCRIBE",
+      "count": 2
+    },
+    {
+      "db": "neutron",
+      "op": "CREATE",
+      "count": 1
+    },
+    {
+      "db": "neutron",
+      "op": "SHOW",
+      "count": 4
+    }
+  ],
+  "processes": [
+    {
+      "cmd": "/usr/lib/erlang/erts-13.2.2.5/bin/beam.smp",
+      "pid": 18153,
+      "args": "-W w -MBas ageffcbf -MHas ageffcbf -MBlmbcs 512 -MHlmbcs 512 -MMmcs 30 -pc unicode -P 1048576 -t 5000000 -stbt db -zdbbl 128000 -sbwt none -sbwtdcpu none -sbwtdio none -- -root /usr/lib/erlang -bindir /usr/lib/erlang/erts-13.2.2.5/bin -progname erl -- -home /var/lib/rabbitmq -- -pa  -noshell -noinput -s rabbit boot -boot start_sasl -syslog logger [] -syslog syslog_error_logger false -kernel prevent_overlapping_partitions false -enable-feature maybe_expr",
+      "rss": 136794112
+    },
+    {
+      "cmd": "/usr/lib/erlang/erts-13.2.2.5/bin/inet_gethost",
+      "pid": 18239,
+      "args": "4",
+      "rss": 2011136
+    },
+    {
+      "cmd": "/usr/lib/erlang/erts-13.2.2.5/bin/inet_gethost",
+      "pid": 18240,
+      "args": "4",
+      "rss": 1609728
+    },
+    {
+      "cmd": "/usr/sbin/mysqld",
+      "pid": 43257,
+      "args": "",
+      "rss": 483229696
+    },
+    {
+      "cmd": "/opt/stack/bin/etcd",
+      "pid": 45030,
+      "args": "--name np0000042079 --data-dir /opt/stack/data/etcd --initial-cluster-state new --initial-cluster-token etcd-cluster-01 --initial-cluster np0000042079=http://192.168.1.120:2380 --initial-advertise-peer-urls http://192.168.1.120:2380 --advertise-client-urls http://192.168.1.120:2379 --listen-peer-urls http://0.0.0.0:2380 --listen-client-urls http://192.168.1.120:2379 --log-level=debug",
+      "rss": 28848128
+    }
+  ],
+  "api": [
+    {
+      "service": "identity",
+      "log": "tls-proxy_access.log",
+      "largest": 4895,
+      "openstacksdk-GET": 489,
+      "openstacksdk-POST": 126,
+      "openstacksdk-PUT": 24
+    },
+    {
+      "service": "identity",
+      "log": "access.log",
+      "largest": 2270,
+      "openstacksdk-GET": 489,
+      "openstacksdk-POST": 126,
+      "openstacksdk-PUT": 24
+    }
+  ],
+  "report": {
+    "timestamp": "2026-08-17T07:25:07.669112",
+    "hostname": "np0000042079",
+    "version": 2
+  }
+}
