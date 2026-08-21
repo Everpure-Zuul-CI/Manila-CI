@@ -1,0 +1,39 @@
+Aug 21 19:55:34.558012 np0000042548 systemd[1]: Started devstack@m-shr.service - Devstack devstack@m-shr.service.
+Aug 21 19:55:34.769509 np0000042548 manila-share[90194]: /opt/stack/manila/manila/monkey_patch.py:38: EventletDeprecationWarning:
+Aug 21 19:55:34.769509 np0000042548 manila-share[90194]: Eventlet is deprecated. It is currently being maintained in bugfix mode, and
+Aug 21 19:55:34.769509 np0000042548 manila-share[90194]: we strongly recommend against using it for new projects.
+Aug 21 19:55:34.769509 np0000042548 manila-share[90194]: If you are already using Eventlet, we recommend migrating to a different
+Aug 21 19:55:34.769509 np0000042548 manila-share[90194]: framework.  For more detail see
+Aug 21 19:55:34.769509 np0000042548 manila-share[90194]: https://eventlet.readthedocs.io/en/latest/asyncio/migration.html
+Aug 21 19:55:34.769509 np0000042548 manila-share[90194]:   import eventlet
+Aug 21 19:55:35.698841 np0000042548 manila-share[90194]: DEBUG oslo_concurrency.lockutils [-] Acquiring lock "singleton_lock" {{(pid=90194) lock /opt/stack/data/venv/lib/python3.12/site-packages/oslo_concurrency/lockutils.py:396}}
+Aug 21 19:55:35.698961 np0000042548 manila-share[90194]: DEBUG oslo_concurrency.lockutils [-] Acquired lock "singleton_lock" {{(pid=90194) lock /opt/stack/data/venv/lib/python3.12/site-packages/oslo_concurrency/lockutils.py:399}}
+Aug 21 19:55:35.699111 np0000042548 manila-share[90194]: DEBUG oslo_concurrency.lockutils [-] Releasing lock "singleton_lock" {{(pid=90194) lock /opt/stack/data/venv/lib/python3.12/site-packages/oslo_concurrency/lockutils.py:419}}
+Aug 21 19:55:35.866776 np0000042548 manila-share[90194]: INFO oslo_service.periodic_task [-] Skipping periodic task update_share_usage_size because it is disabled
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: CRITICAL manila [None req-4050072d-a5b4-4b1e-8dd6-0bc8eba94558 None None] Unhandled error: ModuleNotFoundError: No module named 'manila.share.drivers.everpure'
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila Traceback (most recent call last):
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila   File "/opt/stack/data/venv/bin/manila-share", line 6, in <module>
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila     sys.exit(main())
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila              ^^^^^^
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila   File "/opt/stack/manila/manila/cmd/share.py", line 47, in main
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila     server = service.Service.create(host=host,
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila   File "/opt/stack/manila/manila/service.py", line 232, in create
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila     service_obj = cls(host, binary, topic, manager,
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila   File "/opt/stack/manila/manila/service.py", line 124, in __init__
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila     self.manager = manager_class(host=self.host,
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila   File "/opt/stack/manila/manila/share/manager.py", line 337, in __init__
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila     self.driver = importutils.import_object(
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila   File "/opt/stack/data/venv/lib/python3.12/site-packages/oslo_utils/importutils.py", line 46, in import_object
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila     return import_class(import_str)(*args, **kwargs)
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila            ^^^^^^^^^^^^^^^^^^^^^^^^
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila   File "/opt/stack/data/venv/lib/python3.12/site-packages/oslo_utils/importutils.py", line 31, in import_class
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila     __import__(mod_str)
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila ModuleNotFoundError: No module named 'manila.share.drivers.everpure'
+Aug 21 19:55:35.870394 np0000042548 manila-share[90194]: ERROR manila 
+Aug 21 19:55:36.140006 np0000042548 systemd[1]: devstack@m-shr.service: Main process exited, code=exited, status=1/FAILURE
+Aug 21 19:55:36.140020 np0000042548 systemd[1]: devstack@m-shr.service: Failed with result 'exit-code'.
+Aug 21 19:55:36.140243 np0000042548 systemd[1]: devstack@m-shr.service: Consumed 1.495s CPU time, 91.0M memory peak, 0B memory swap peak.
