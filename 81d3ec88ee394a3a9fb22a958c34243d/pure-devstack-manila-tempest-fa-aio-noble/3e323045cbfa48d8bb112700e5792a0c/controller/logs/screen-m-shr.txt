@@ -1,0 +1,36 @@
+Sep 03 02:26:06.321538 np0000043695 systemd[1]: Started devstack@m-shr.service - Devstack devstack@m-shr.service.
+Sep 03 02:26:06.571609 np0000043695 manila-share[90480]: /opt/stack/data/venv/lib/python3.12/site-packages/futurist/_utils.py:34: EventletDeprecationWarning:
+Sep 03 02:26:06.571609 np0000043695 manila-share[90480]: Eventlet is deprecated. It is currently being maintained in bugfix mode, and
+Sep 03 02:26:06.571609 np0000043695 manila-share[90480]: we strongly recommend against using it for new projects.
+Sep 03 02:26:06.571609 np0000043695 manila-share[90480]: If you are already using Eventlet, we recommend migrating to a different
+Sep 03 02:26:06.571609 np0000043695 manila-share[90480]: framework.  For more detail see
+Sep 03 02:26:06.571609 np0000043695 manila-share[90480]: https://eventlet.readthedocs.io/en/latest/asyncio/migration.html
+Sep 03 02:26:06.571609 np0000043695 manila-share[90480]:   import eventlet as _eventlet  # noqa
+Sep 03 02:26:07.448515 np0000043695 manila-share[90480]: INFO oslo_service.periodic_task [-] Skipping periodic task update_share_usage_size because it is disabled
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: CRITICAL manila [None req-51e0a58e-6a9d-4224-a63d-5f50b38e644f None None] Unhandled error: ModuleNotFoundError: No module named 'manila.share.drivers.everpure'
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila Traceback (most recent call last):
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila   File "/opt/stack/data/venv/bin/manila-share", line 6, in <module>
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila     sys.exit(main())
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila              ^^^^^^
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila   File "/opt/stack/manila/manila/cmd/share.py", line 47, in main
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila     server = service.Service.create(host=host,
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila   File "/opt/stack/manila/manila/service.py", line 231, in create
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila     service_obj = cls(host, binary, topic, manager,
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila   File "/opt/stack/manila/manila/service.py", line 123, in __init__
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila     self.manager = manager_class(host=self.host,
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila   File "/opt/stack/manila/manila/share/manager.py", line 314, in __init__
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila     self.driver = importutils.import_object(
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila   File "/opt/stack/data/venv/lib/python3.12/site-packages/oslo_utils/importutils.py", line 46, in import_object
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila     return import_class(import_str)(*args, **kwargs)
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila            ^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila   File "/opt/stack/data/venv/lib/python3.12/site-packages/oslo_utils/importutils.py", line 31, in import_class
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila     __import__(mod_str)
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila ModuleNotFoundError: No module named 'manila.share.drivers.everpure'
+Sep 03 02:26:07.451348 np0000043695 manila-share[90480]: ERROR manila 
+Sep 03 02:26:07.753456 np0000043695 systemd[1]: devstack@m-shr.service: Main process exited, code=exited, status=1/FAILURE
+Sep 03 02:26:07.753466 np0000043695 systemd[1]: devstack@m-shr.service: Failed with result 'exit-code'.
+Sep 03 02:26:07.753673 np0000043695 systemd[1]: devstack@m-shr.service: Consumed 1.285s CPU time, 88.2M memory peak, 0B memory swap peak.
