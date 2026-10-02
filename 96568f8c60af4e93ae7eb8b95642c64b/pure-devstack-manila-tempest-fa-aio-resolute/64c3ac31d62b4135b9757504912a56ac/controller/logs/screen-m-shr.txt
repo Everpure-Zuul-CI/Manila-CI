@@ -1,0 +1,52 @@
+Oct 02 07:53:40.720179 np0000046173 systemd[1]: Started devstack@m-shr.service - Devstack devstack@m-shr.service.
+Oct 02 07:53:40.986721 np0000046173 manila-share[91745]: /opt/stack/data/venv/lib/python3.14/site-packages/futurist/_utils.py:34: EventletDeprecationWarning:
+Oct 02 07:53:40.986721 np0000046173 manila-share[91745]: Eventlet is deprecated. It is currently being maintained in bugfix mode, and
+Oct 02 07:53:40.986721 np0000046173 manila-share[91745]: we strongly recommend against using it for new projects.
+Oct 02 07:53:40.986721 np0000046173 manila-share[91745]: If you are already using Eventlet, we recommend migrating to a different
+Oct 02 07:53:40.986721 np0000046173 manila-share[91745]: framework.  For more detail see
+Oct 02 07:53:40.986721 np0000046173 manila-share[91745]: https://eventlet.readthedocs.io/en/latest/asyncio/migration.html
+Oct 02 07:53:40.986721 np0000046173 manila-share[91745]:   import eventlet as _eventlet  # noqa
+Oct 02 07:53:41.824890 np0000046173 manila-share[91745]: INFO oslo_service.periodic_task [-] Skipping periodic task update_share_usage_size because it is disabled
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: CRITICAL manila [None req-a46997f1-2c9d-42d5-9f64-3282d46d44ad None None] Unhandled error: ModuleNotFoundError: No module named 'manila.share.drivers.everpure'
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila Traceback (most recent call last):
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila   File "/opt/stack/data/venv/bin/manila-share", line 6, in <module>
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila     sys.exit(main())
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila              ~~~~^^
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila   File "/opt/stack/manila/manila/cmd/share.py", line 47, in main
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila     server = service.Service.create(host=host,
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                                     service_name=backend,
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                                     binary='manila-share',
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                                     coordination=True)
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila   File "/opt/stack/manila/manila/service.py", line 231, in create
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila     service_obj = cls(host, binary, topic, manager,
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                       report_interval=report_interval,
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila     ...<2 lines>...
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                       service_name=service_name,
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                       coordination=coordination)
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila   File "/opt/stack/manila/manila/service.py", line 123, in __init__
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila     self.manager = manager_class(host=self.host,
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                                  service_name=service_name,
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                                  *args, **kwargs)
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila                                  ^^^^^^^^^^^^^^^^
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila   File "/opt/stack/manila/manila/share/manager.py", line 314, in __init__
+Oct 02 07:53:41.828334 np0000046173 manila-share[91745]: ERROR manila     self.driver = importutils.import_object(
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila                   ~~~~~~~~~~~~~~~~~~~~~~~~~^
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila         share_driver, private_storage=private_storage,
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila         configuration=self.configuration,
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila     )
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila     ^
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila   File "/opt/stack/data/venv/lib/python3.14/site-packages/oslo_utils/importutils.py", line 46, in import_object
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila     return import_class(import_str)(*args, **kwargs)
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila            ~~~~~~~~~~~~^^^^^^^^^^^^
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila   File "/opt/stack/data/venv/lib/python3.14/site-packages/oslo_utils/importutils.py", line 31, in import_class
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila     __import__(mod_str)
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila     ~~~~~~~~~~^^^^^^^^^
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila ModuleNotFoundError: No module named 'manila.share.drivers.everpure'
+Oct 02 07:53:41.829702 np0000046173 manila-share[91745]: ERROR manila 
+Oct 02 07:53:42.219779 np0000046173 systemd[1]: devstack@m-shr.service: Main process exited, code=exited, status=1/FAILURE
+Oct 02 07:53:42.219790 np0000046173 systemd[1]: devstack@m-shr.service: Failed with result 'exit-code'.
+Oct 02 07:53:42.220041 np0000046173 systemd[1]: devstack@m-shr.service: Consumed 1.330s CPU time over 1.499s wall clock time, 100.2M memory peak.
