@@ -1,0 +1,16 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh nwfilter-edit no-mac-spoofing
+or other application using the libvirt API.
+-->
+
+<filter name='no-mac-spoofing' chain='mac' priority='-800'>
+  <uuid>30d2b170-9d71-41d8-8e4c-06d8d05021c1</uuid>
+  <rule action='return' direction='out' priority='500'>
+    <mac srcmacaddr='$MAC'/>
+  </rule>
+  <rule action='drop' direction='out' priority='500'>
+    <mac/>
+  </rule>
+</filter>
