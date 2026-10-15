@@ -1,0 +1,949 @@
+2026-10-15 18:20:44.150588 | Job console starting...
+2026-10-15 18:20:44.172772 | Updating repositories
+2026-10-15 18:20:44.611132 | Preparing job workspace
+2026-10-15 18:21:03.172795 | Running Ansible setup...
+2026-10-15 18:21:06.027520 | PRE-RUN START: [trusted : cinderci-sf.dev.purestorage.com/thirdparty-ci-config/playbooks/base/pre.yaml@master]
+2026-10-15 18:21:06.539762 | 
+2026-10-15 18:21:06.539893 | PLAY [localhost]
+2026-10-15 18:21:06.548161 | 
+2026-10-15 18:21:06.548255 | TASK [Gathering Facts]
+2026-10-15 18:21:07.324592 | localhost | ok
+2026-10-15 18:21:07.344032 | 
+2026-10-15 18:21:07.344171 | TASK [Setup log path fact]
+2026-10-15 18:21:07.362570 | localhost | ok
+2026-10-15 18:21:07.379228 | 
+2026-10-15 18:21:07.379524 | TASK [set-zuul-log-path-fact : Set log path for a build]
+2026-10-15 18:21:07.411123 | localhost | ok
+2026-10-15 18:21:07.418936 | 
+2026-10-15 18:21:07.419041 | TASK [emit-job-header : Print job information]
+2026-10-15 18:21:07.445271 | # Job Information
+2026-10-15 18:21:07.445426 | Ansible Version: 2.15.10
+2026-10-15 18:21:07.445460 | Job: pure-devstack-manila-tempest-fa-aio-resolute
+2026-10-15 18:21:07.445480 | Pipeline: thirdparty-check
+2026-10-15 18:21:07.445495 | Executor: managesf.cinderci-sf.dev.purestorage.com
+2026-10-15 18:21:07.445511 | Triggered by: https://review.opendev.org/c/openstack/manila/+/1010730
+2026-10-15 18:21:07.445531 | Log URL (when completed): http://openstack-logs.purestorage.com/275/third-party-ci/27549b6ac66b46328682166d85f35a49/
+2026-10-15 18:21:07.445547 | Event ID: 98290c68141b43cca05a0b7d8f1cb415
+2026-10-15 18:21:07.449039 | 
+2026-10-15 18:21:07.449114 | LOOP [emit-job-header : Print node information]
+2026-10-15 18:21:07.541141 | localhost | ok:
+2026-10-15 18:21:07.541283 | localhost | # Node Information
+2026-10-15 18:21:07.541307 | localhost | Inventory Hostname: controller
+2026-10-15 18:21:07.541324 | localhost | Hostname: np0000047774
+2026-10-15 18:21:07.541340 | localhost | Username: zuul
+2026-10-15 18:21:07.541358 | localhost | Distro: Ubuntu 26.04
+2026-10-15 18:21:07.541374 | localhost | Provider: cinderci
+2026-10-15 18:21:07.541387 | localhost | Region: cinderci
+2026-10-15 18:21:07.541401 | localhost | Label: dsvm-resolute-MANILA-FA-aio
+2026-10-15 18:21:07.541414 | localhost | Product Name: OpenStack Nova
+2026-10-15 18:21:07.541427 | localhost | Interface IP: 192.168.1.122
+2026-10-15 18:21:07.549325 | 
+2026-10-15 18:21:07.549438 | TASK [log-inventory : Ensure Zuul Ansible directory exists]
+2026-10-15 18:21:07.867278 | localhost -> localhost | changed
+2026-10-15 18:21:07.873244 | 
+2026-10-15 18:21:07.873339 | TASK [log-inventory : Copy ansible inventory to logs dir]
+2026-10-15 18:21:08.625753 | localhost -> localhost | changed
+2026-10-15 18:21:08.648198 | 
+2026-10-15 18:21:08.648283 | PLAY [all]
+2026-10-15 18:21:08.668472 | 
+2026-10-15 18:21:08.668584 | TASK [include_role : start-zuul-console]
+2026-10-15 18:21:08.688150 | controller | ok
+2026-10-15 18:21:08.703581 | 
+2026-10-15 18:21:08.703701 | TASK [start-zuul-console : Start zuul_console daemon.]
+2026-10-15 18:21:08.996450 | controller | ok
+2026-10-15 18:21:09.007351 | 
+2026-10-15 18:21:09.007428 | TASK [include_role : validate-host]
+2026-10-15 18:21:09.026059 | controller | ok
+2026-10-15 18:21:09.046069 | 
+2026-10-15 18:21:09.046164 | TASK [validate-host : Define zuul_info_dir fact]
+2026-10-15 18:21:09.077049 | controller | ok
+2026-10-15 18:21:09.085877 | 
+2026-10-15 18:21:09.086005 | TASK [validate-host : Ensure Zuul Ansible directory exists]
+2026-10-15 18:21:09.303399 | controller -> localhost | ok
+2026-10-15 18:21:09.310565 | 
+2026-10-15 18:21:09.310650 | TASK [validate-host : Collect information about the host]
+2026-10-15 18:21:09.965058 | controller | ok
+2026-10-15 18:21:09.985512 | 
+2026-10-15 18:21:09.985875 | TASK [validate-host : Sanitize hostname]
+2026-10-15 18:21:10.037048 | controller | ok
+2026-10-15 18:21:10.045593 | 
+2026-10-15 18:21:10.045707 | TASK [validate-host : Write out all ansible variables/facts known for each host]
+2026-10-15 18:21:10.478748 | controller -> localhost | changed
+2026-10-15 18:21:10.487897 | 
+2026-10-15 18:21:10.488051 | TASK [validate-host : Collect information about zuul worker]
+2026-10-15 18:21:10.832938 | controller | ok
+2026-10-15 18:21:10.839615 | 
+2026-10-15 18:21:10.839705 | TASK [validate-host : Write out all zuul information for each host]
+2026-10-15 18:21:11.199014 | controller -> localhost | changed
+2026-10-15 18:21:11.215047 | 
+2026-10-15 18:21:11.215146 | TASK [include_role : prepare-workspace]
+2026-10-15 18:21:11.235557 | controller | ok
+2026-10-15 18:21:11.268403 | 
+2026-10-15 18:21:11.268510 | TASK [prepare-workspace : Start zuul_console daemon.]
+2026-10-15 18:21:11.460578 | controller | ok
+2026-10-15 18:21:11.466458 | 
+2026-10-15 18:21:11.466555 | TASK [prepare-workspace : Synchronize src repos to workspace directory.]
+2026-10-15 18:22:22.652310 | controller | Output suppressed because no_log was given
+2026-10-15 18:22:22.660099 | 
+2026-10-15 18:22:22.660178 | TASK [include_role : add-build-sshkey]
+2026-10-15 18:22:22.679943 | controller | ok
+2026-10-15 18:22:22.696591 | 
+2026-10-15 18:22:22.696689 | TASK [add-build-sshkey : Check to see if ssh key was already created for this build]
+2026-10-15 18:22:22.881382 | controller -> localhost | ok
+2026-10-15 18:22:22.887805 | 
+2026-10-15 18:22:22.887910 | TASK [add-build-sshkey : Create a new key in workspace based on build UUID]
+2026-10-15 18:22:22.915482 | controller | ok
+2026-10-15 18:22:22.927334 | controller | included: /var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/trusted/project_1/opendev.org/zuul/zuul-jobs/roles/add-build-sshkey/tasks/create-key-and-replace.yaml
+2026-10-15 18:22:22.932923 | 
+2026-10-15 18:22:22.933022 | TASK [add-build-sshkey : Create Temp SSH key]
+2026-10-15 18:22:23.360542 | controller -> localhost | Generating public/private rsa key pair.
+2026-10-15 18:22:23.360768 | controller -> localhost | Your identification has been saved in /var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/work/27549b6ac66b46328682166d85f35a49_id_rsa.
+2026-10-15 18:22:23.360811 | controller -> localhost | Your public key has been saved in /var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/work/27549b6ac66b46328682166d85f35a49_id_rsa.pub.
+2026-10-15 18:22:23.360836 | controller -> localhost | The key fingerprint is:
+2026-10-15 18:22:23.360861 | controller -> localhost | SHA256:cXBka3ytXzaQnNAFRtKPxC6digqFs0i4nScgScym6Gg zuul-build-sshkey
+2026-10-15 18:22:23.360886 | controller -> localhost | The key's randomart image is:
+2026-10-15 18:22:23.360908 | controller -> localhost | +---[RSA 3072]----+
+2026-10-15 18:22:23.360929 | controller -> localhost | |o       ..+o=+o. |
+2026-10-15 18:22:23.360976 | controller -> localhost | | =       = .=*o  |
+2026-10-15 18:22:23.361012 | controller -> localhost | |=..   . . = ===  |
+2026-10-15 18:22:23.361034 | controller -> localhost | |=o . o . + o *.. |
+2026-10-15 18:22:23.361053 | controller -> localhost | |+ = o + S . +  .o|
+2026-10-15 18:22:23.361071 | controller -> localhost | |.E = +   . . . o.|
+2026-10-15 18:22:23.361089 | controller -> localhost | |.   o . .     .  |
+2026-10-15 18:22:23.361108 | controller -> localhost | |       .         |
+2026-10-15 18:22:23.361125 | controller -> localhost | |                 |
+2026-10-15 18:22:23.361149 | controller -> localhost | +----[SHA256]-----+
+2026-10-15 18:22:23.361195 | controller -> localhost | ok: Runtime: 0:00:00.114297
+2026-10-15 18:22:23.366501 | 
+2026-10-15 18:22:23.366577 | TASK [add-build-sshkey : Remote setup ssh keys (linux)]
+2026-10-15 18:22:23.383510 | controller | ok
+2026-10-15 18:22:23.390845 | controller | included: /var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/trusted/project_1/opendev.org/zuul/zuul-jobs/roles/add-build-sshkey/tasks/remote-linux.yaml
+2026-10-15 18:22:23.398233 | 
+2026-10-15 18:22:23.398296 | TASK [add-build-sshkey : Remove previously added zuul-build-sshkey]
+2026-10-15 18:22:23.415890 | controller | skipping: Conditional result was False
+2026-10-15 18:22:23.420862 | 
+2026-10-15 18:22:23.420956 | TASK [add-build-sshkey : Enable access via build key on all nodes]
+2026-10-15 18:22:23.938390 | controller | changed
+2026-10-15 18:22:23.942872 | 
+2026-10-15 18:22:23.942949 | TASK [add-build-sshkey : Make sure user has a .ssh]
+2026-10-15 18:22:24.121820 | controller | ok
+2026-10-15 18:22:24.126597 | 
+2026-10-15 18:22:24.126687 | TASK [add-build-sshkey : Install build private key as SSH key on all nodes]
+2026-10-15 18:22:24.517807 | controller | changed
+2026-10-15 18:22:24.522410 | 
+2026-10-15 18:22:24.522489 | TASK [add-build-sshkey : Install build public key as SSH key on all nodes]
+2026-10-15 18:22:24.913615 | controller | changed
+2026-10-15 18:22:24.918258 | 
+2026-10-15 18:22:24.918334 | TASK [add-build-sshkey : Remote setup ssh keys (windows)]
+2026-10-15 18:22:24.931064 | controller | skipping: Conditional result was False
+2026-10-15 18:22:24.936459 | 
+2026-10-15 18:22:24.936525 | TASK [remove-zuul-sshkey : Remove master key from local agent]
+2026-10-15 18:22:25.232370 | controller -> localhost | changed
+2026-10-15 18:22:25.241294 | 
+2026-10-15 18:22:25.241382 | TASK [add-build-sshkey : Add back temp key]
+2026-10-15 18:22:25.446003 | controller -> localhost | Identity added: /var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/work/27549b6ac66b46328682166d85f35a49_id_rsa (zuul-build-sshkey)
+2026-10-15 18:22:25.446203 | controller -> localhost | ok: Runtime: 0:00:00.005613
+2026-10-15 18:22:25.451594 | 
+2026-10-15 18:22:25.451667 | TASK [add-build-sshkey : Verify we can still SSH to all nodes]
+2026-10-15 18:22:25.731256 | controller | ok
+2026-10-15 18:22:25.735810 | 
+2026-10-15 18:22:25.735904 | TASK [add-build-sshkey : Verify we can still SSH to all nodes (windows)]
+2026-10-15 18:22:25.759140 | controller | skipping: Conditional result was False
+2026-10-15 18:22:25.768109 | 
+2026-10-15 18:22:25.768205 | TASK [include_role : prepare-workspace-openshift]
+2026-10-15 18:22:25.781077 | controller | skipping: Conditional result was False
+2026-10-15 18:22:25.786100 | 
+2026-10-15 18:22:25.786184 | TASK [include_role : remove-zuul-sshkey]
+2026-10-15 18:22:25.799014 | controller | skipping: Conditional result was False
+2026-10-15 18:22:25.805338 | 
+2026-10-15 18:22:25.805425 | LOOP [ensure-output-dirs : Empty Zuul Output directories by removing them]
+2026-10-15 18:22:25.991493 | controller | ok: "logs"
+2026-10-15 18:22:25.991718 | controller | ok: All items complete
+2026-10-15 18:22:25.991752 | 
+2026-10-15 18:22:26.149937 | controller | ok: "artifacts"
+2026-10-15 18:22:26.309977 | controller | ok: "docs"
+2026-10-15 18:22:26.318508 | 
+2026-10-15 18:22:26.318588 | LOOP [ensure-output-dirs : Ensure Zuul Output directories exist]
+2026-10-15 18:22:26.507790 | controller | changed: "logs"
+2026-10-15 18:22:26.669709 | controller | changed: "artifacts"
+2026-10-15 18:22:26.826737 | controller | changed: "docs"
+2026-10-15 18:22:26.848323 | 
+2026-10-15 18:22:26.848392 | PLAY RECAP
+2026-10-15 18:22:26.848429 | controller | ok: 23 changed: 10 unreachable: 0 failed: 0 skipped: 5 rescued: 0 ignored: 0
+2026-10-15 18:22:26.848452 | localhost | ok: 6 changed: 2 unreachable: 0 failed: 0 skipped: 0 rescued: 0 ignored: 0
+2026-10-15 18:22:26.848466 | 
+2026-10-15 18:22:26.931610 | PRE-RUN END RESULT_NORMAL: [trusted : cinderci-sf.dev.purestorage.com/thirdparty-ci-config/playbooks/base/pre.yaml@master]
+2026-10-15 18:22:26.935305 | PRE-RUN START: [untrusted : opendev.org/openstack/devstack/playbooks/pre.yaml@master]
+2026-10-15 18:22:27.413697 | 
+2026-10-15 18:22:27.413798 | PLAY [all]
+2026-10-15 18:22:27.428517 | 
+2026-10-15 18:22:27.428602 | TASK [Fix the permissions of the zuul home directory]
+2026-10-15 18:22:27.810133 | controller | changed
+2026-10-15 18:22:27.815634 | 
+2026-10-15 18:22:27.815737 | TASK [Gather minimum local MTU]
+2026-10-15 18:22:27.884866 | controller | ok
+2026-10-15 18:22:27.889721 | 
+2026-10-15 18:22:27.889802 | TASK [Calculate external_bridge_mtu]
+2026-10-15 18:22:27.937685 | controller | ok
+2026-10-15 18:22:27.951062 | 
+2026-10-15 18:22:27.951157 | TASK [configure-swap : Set ephemeral device if /dev/xvde exists]
+2026-10-15 18:22:27.974333 | controller | skipping: Conditional result was False
+2026-10-15 18:22:27.980773 | 
+2026-10-15 18:22:27.980855 | TASK [configure-swap : Get ephemeral0 device node]
+2026-10-15 18:22:28.504737 | controller | ok: Runtime: 0:00:00.002787
+2026-10-15 18:22:28.510207 | 
+2026-10-15 18:22:28.510288 | TASK [configure-swap : Set ephemeral device if LABEL exists]
+2026-10-15 18:22:28.533317 | controller | skipping: Conditional result was False
+2026-10-15 18:22:28.538652 | 
+2026-10-15 18:22:28.538733 | TASK [configure-swap : Setup swap on ephemeral storage]
+2026-10-15 18:22:28.561425 | controller | skipping: Conditional result was False
+2026-10-15 18:22:28.566769 | 
+2026-10-15 18:22:28.566844 | TASK [configure-swap : Setup swap file on root device]
+2026-10-15 18:22:28.604522 | controller | ok
+2026-10-15 18:22:28.612862 | controller | included: /var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/untrusted/project_1/opendev.org/openstack/openstack-zuul-jobs/roles/configure-swap/tasks/root.yaml
+2026-10-15 18:22:28.619468 | 
+2026-10-15 18:22:28.619536 | TASK [configure-swap : Calculate required swap]
+2026-10-15 18:22:28.656689 | controller | ok
+2026-10-15 18:22:28.661733 | 
+2026-10-15 18:22:28.661801 | TASK [configure-swap : Get root filesystem]
+2026-10-15 18:22:28.853402 | controller | ext4
+2026-10-15 18:22:29.185514 | controller | ok: Runtime: 0:00:00.004398
+2026-10-15 18:22:29.190901 | 
+2026-10-15 18:22:29.190989 | TASK [configure-swap : Save root filesystem]
+2026-10-15 18:22:29.218457 | controller | ok
+2026-10-15 18:22:29.223770 | 
+2026-10-15 18:22:29.223836 | TASK [configure-swap : Debug the root_filesystem variable]
+2026-10-15 18:22:29.260459 | controller | ok:
+2026-10-15 18:22:29.260569 | controller | {
+2026-10-15 18:22:29.260592 | controller |   "root_filesystem": "ext4"
+2026-10-15 18:22:29.260608 | controller | }
+2026-10-15 18:22:29.265208 | 
+2026-10-15 18:22:29.265279 | TASK [configure-swap : Create swap backing file]
+2026-10-15 18:22:32.108283 | controller | 8192+0 records in
+2026-10-15 18:22:32.288341 | controller | 8192+0 records out
+2026-10-15 18:22:32.288362 | controller | 8589934592 bytes (8.6 GB, 8.0 GiB) copied, 2.64462 s, 3.2 GB/s
+2026-10-15 18:22:32.311225 | controller | ok: Runtime: 0:00:02.829738
+2026-10-15 18:22:32.316187 | 
+2026-10-15 18:22:32.316257 | TASK [configure-swap : Ensure swapfile perms]
+2026-10-15 18:22:32.555722 | controller | changed
+2026-10-15 18:22:32.560912 | 
+2026-10-15 18:22:32.560999 | TASK [configure-swap : Make swapfile]
+2026-10-15 18:22:32.766127 | controller | Setting up swapspace version 1, size = 8 GiB (8589930496 bytes)
+2026-10-15 18:22:32.766216 | controller | no label, UUID=3fe39400-b782-45a1-8a9e-90a785c7be15
+2026-10-15 18:22:33.085289 | controller | ok: Runtime: 0:00:00.008853
+2026-10-15 18:22:33.090776 | 
+2026-10-15 18:22:33.090857 | TASK [configure-swap : Write swap to fstab]
+2026-10-15 18:22:33.391634 | controller | changed
+2026-10-15 18:22:33.396629 | 
+2026-10-15 18:22:33.396719 | TASK [configure-swap : Add all swap]
+2026-10-15 18:22:33.920136 | controller | ok: Runtime: 0:00:00.005249
+2026-10-15 18:22:33.925574 | 
+2026-10-15 18:22:33.925656 | TASK [configure-swap : Debug the swap_required variable]
+2026-10-15 18:22:33.953288 | controller | ok:
+2026-10-15 18:22:33.953405 | controller | {
+2026-10-15 18:22:33.953428 | controller |   "swap_required": "8192"
+2026-10-15 18:22:33.953443 | controller | }
+2026-10-15 18:22:33.958125 | 
+2026-10-15 18:22:33.958194 | TASK [configure-swap : Set swappiness]
+2026-10-15 18:22:34.248721 | controller | changed
+2026-10-15 18:22:34.253461 | 
+2026-10-15 18:22:34.253536 | TASK [configure-swap : Debug the ephemeral_device variable]
+2026-10-15 18:22:34.280596 | controller | ok:
+2026-10-15 18:22:34.280710 | controller | {
+2026-10-15 18:22:34.280733 | controller |   "ephemeral_device": "VARIABLE IS NOT DEFINED!: 'ephemeral_device' is undefined. 'ephemeral_device' is undefined"
+2026-10-15 18:22:34.280750 | controller | }
+2026-10-15 18:22:34.289622 | 
+2026-10-15 18:22:34.289696 | TASK [setup-stack-user : Create stack group]
+2026-10-15 18:22:34.600664 | controller | changed
+2026-10-15 18:22:34.605631 | 
+2026-10-15 18:22:34.605716 | TASK [setup-stack-user : Create the stack user home folder]
+2026-10-15 18:22:34.785043 | controller | changed
+2026-10-15 18:22:34.790313 | 
+2026-10-15 18:22:34.790393 | TASK [setup-stack-user : Create stack user]
+2026-10-15 18:22:35.172016 | controller | changed
+2026-10-15 18:22:35.177853 | 
+2026-10-15 18:22:35.177928 | TASK [setup-stack-user : Set stack user home directory permissions and ownership]
+2026-10-15 18:22:35.356927 | controller | changed
+2026-10-15 18:22:35.362493 | 
+2026-10-15 18:22:35.362571 | TASK [setup-stack-user : Copy 50_stack_sh file to /etc/sudoers.d]
+2026-10-15 18:22:36.117631 | controller | changed
+2026-10-15 18:22:36.122870 | 
+2026-10-15 18:22:36.122942 | TASK [setup-stack-user : Create .cache folder within BASE]
+2026-10-15 18:22:36.312717 | controller | changed
+2026-10-15 18:22:36.321983 | 
+2026-10-15 18:22:36.322066 | TASK [setup-tempest-user : Create tempest group]
+2026-10-15 18:22:36.510980 | controller | changed
+2026-10-15 18:22:36.515844 | 
+2026-10-15 18:22:36.515917 | TASK [setup-tempest-user : Create tempest user]
+2026-10-15 18:22:36.756481 | controller | changed
+2026-10-15 18:22:36.761621 | 
+2026-10-15 18:22:36.761718 | TASK [setup-tempest-user : Copy 51_tempest_sh to /etc/sudoers.d]
+2026-10-15 18:22:37.294846 | controller | changed
+2026-10-15 18:22:37.304121 | 
+2026-10-15 18:22:37.304198 | TASK [setup-devstack-source-dirs : Find all OpenStack source repos used by this job]
+2026-10-15 18:22:37.598686 | controller | ok: Not all paths examined, check warnings for details
+2026-10-15 18:22:37.606773 | 
+2026-10-15 18:22:37.606849 | LOOP [setup-devstack-source-dirs : Copy Zuul repos into devstack working directory]
+2026-10-15 18:22:37.906195 | controller | ok: Item: Runtime: 0:00:00.090381
+2026-10-15 18:22:38.144015 | controller | ok: Item: Runtime: 0:00:00.074691
+2026-10-15 18:22:38.444464 | controller | ok: Item: Runtime: 0:00:00.135619
+2026-10-15 18:22:39.010733 | controller | ok: Item: Runtime: 0:00:00.400191
+2026-10-15 18:22:39.342824 | controller | ok: Item: Runtime: 0:00:00.167800
+2026-10-15 18:22:39.704219 | controller | ok: Item: Runtime: 0:00:00.196068
+2026-10-15 18:22:39.995206 | controller | ok: Item: Runtime: 0:00:00.109248
+2026-10-15 18:22:40.245799 | controller | ok: Item: Runtime: 0:00:00.086786
+2026-10-15 18:22:41.649241 | controller | ok: Item: Runtime: 0:00:01.239935
+2026-10-15 18:22:42.244674 | controller | ok: Item: Runtime: 0:00:00.430801
+2026-10-15 18:22:42.457883 | controller | ok: Item: Runtime: 0:00:00.049905
+2026-10-15 18:22:43.268194 | controller | ok: Item: Runtime: 0:00:00.641871
+2026-10-15 18:22:43.621864 | controller | ok: Item: Runtime: 0:00:00.190452
+2026-10-15 18:22:46.029355 | controller | ok: Item: Runtime: 0:00:02.244513
+2026-10-15 18:22:46.051574 | 
+2026-10-15 18:22:46.051668 | TASK [setup-devstack-source-dirs : Find top level github projects]
+2026-10-15 18:22:46.220812 | controller | ok: Not all paths examined, check warnings for details
+2026-10-15 18:22:46.226586 | 
+2026-10-15 18:22:46.226660 | TASK [setup-devstack-source-dirs : Find actual github repos]
+2026-10-15 18:22:46.239641 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.245271 | 
+2026-10-15 18:22:46.245352 | LOOP [setup-devstack-source-dirs : Copy github repos into devstack working directory]
+2026-10-15 18:22:46.263587 | 
+2026-10-15 18:22:46.263733 | LOOP [setup-devstack-source-dirs : Setup refspec for repos into devstack working directory]
+2026-10-15 18:22:46.293174 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.293397 | 
+2026-10-15 18:22:46.295991 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.299152 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.302293 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.305384 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.308502 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.311782 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.314858 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.317869 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.320854 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.323884 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.326915 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.330106 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.332409 | controller | skipping: Conditional result was False
+2026-10-15 18:22:46.347778 | 
+2026-10-15 18:22:46.347849 | TASK [setup-devstack-source-dirs : Set ownership of repos]
+2026-10-15 18:22:47.467151 | controller | changed
+2026-10-15 18:22:47.476524 | 
+2026-10-15 18:22:47.476598 | TASK [setup-devstack-log-dir : Create logs directory]
+2026-10-15 18:22:47.656592 | controller | changed
+2026-10-15 18:22:47.666497 | 
+2026-10-15 18:22:47.666572 | TASK [setup-devstack-cache : Copy cached devstack files]
+2026-10-15 18:22:48.192593 | controller | ok: Runtime: 0:00:00.018285
+2026-10-15 18:22:48.198110 | 
+2026-10-15 18:22:48.198182 | TASK [setup-devstack-cache : Set ownership of cached files]
+2026-10-15 18:22:48.387525 | controller | changed
+2026-10-15 18:22:48.396942 | 
+2026-10-15 18:22:48.397070 | TASK [start-fresh-logging : Check for /bin/journalctl file]
+2026-10-15 18:22:48.589045 | controller | /usr/bin/journalctl
+2026-10-15 18:22:48.921045 | controller | ok: Runtime: 0:00:00.002706
+2026-10-15 18:22:48.926610 | 
+2026-10-15 18:22:48.926698 | TASK [start-fresh-logging : Get current date]
+2026-10-15 18:22:49.156813 | controller | 2026-10-15 18:22:49
+2026-10-15 18:22:49.472577 | controller | ok: Runtime: 0:00:00.007907
+2026-10-15 18:22:49.477866 | 
+2026-10-15 18:22:49.477938 | TASK [start-fresh-logging : Copy current date to log-start-timestamp.txt]
+2026-10-15 18:22:49.859295 | controller | changed
+2026-10-15 18:22:49.864604 | 
+2026-10-15 18:22:49.864686 | TASK [start-fresh-logging : Stop rsyslog]
+2026-10-15 18:22:49.877317 | controller | skipping: Conditional result was False
+2026-10-15 18:22:49.882421 | 
+2026-10-15 18:22:49.882489 | TASK [start-fresh-logging : Save syslog file prior to devstack run]
+2026-10-15 18:22:50.405896 | controller | skipping: Conditional result was False
+2026-10-15 18:22:50.411751 | 
+2026-10-15 18:22:50.411841 | TASK [start-fresh-logging : Save kern.log file prior to devstack run]
+2026-10-15 18:22:50.935588 | controller | skipping: Conditional result was False
+2026-10-15 18:22:50.941684 | 
+2026-10-15 18:22:50.941762 | TASK [start-fresh-logging : Recreate syslog file]
+2026-10-15 18:22:50.954641 | controller | skipping: Conditional result was False
+2026-10-15 18:22:50.960246 | 
+2026-10-15 18:22:50.960318 | TASK [start-fresh-logging : Recreate syslog file owner and group]
+2026-10-15 18:22:51.484039 | controller | skipping: Conditional result was False
+2026-10-15 18:22:51.490107 | 
+2026-10-15 18:22:51.490195 | TASK [start-fresh-logging : Recreate syslog file permissions]
+2026-10-15 18:22:52.014592 | controller | skipping: Conditional result was False
+2026-10-15 18:22:52.020530 | 
+2026-10-15 18:22:52.020608 | TASK [start-fresh-logging : Add read permissions to all on syslog file]
+2026-10-15 18:22:52.033534 | controller | skipping: Conditional result was False
+2026-10-15 18:22:52.039107 | 
+2026-10-15 18:22:52.039180 | TASK [start-fresh-logging : Recreate kern.log file]
+2026-10-15 18:22:52.051829 | controller | skipping: Conditional result was False
+2026-10-15 18:22:52.057153 | 
+2026-10-15 18:22:52.057231 | TASK [start-fresh-logging : Recreate kern.log file owner and group]
+2026-10-15 18:22:52.580689 | controller | skipping: Conditional result was False
+2026-10-15 18:22:52.586349 | 
+2026-10-15 18:22:52.586430 | TASK [start-fresh-logging : Recreate kern.log file permissions]
+2026-10-15 18:22:53.110287 | controller | skipping: Conditional result was False
+2026-10-15 18:22:53.116008 | 
+2026-10-15 18:22:53.116089 | TASK [start-fresh-logging : Add read permissions to all on kern.log file]
+2026-10-15 18:22:53.128988 | controller | skipping: Conditional result was False
+2026-10-15 18:22:53.134355 | 
+2026-10-15 18:22:53.134427 | TASK [start-fresh-logging : Start rsyslog]
+2026-10-15 18:22:53.146929 | controller | skipping: Conditional result was False
+2026-10-15 18:22:53.156692 | 
+2026-10-15 18:22:53.156781 | TASK [write-devstack-local-conf : Write a job-specific local_conf file]
+2026-10-15 18:22:53.487647 | controller | ok
+2026-10-15 18:22:53.513039 | 
+2026-10-15 18:22:53.513117 | PLAY RECAP
+2026-10-15 18:22:53.513160 | controller | ok: 37 changed: 24 unreachable: 0 failed: 0 skipped: 18 rescued: 0 ignored: 0
+2026-10-15 18:22:53.513178 | 
+2026-10-15 18:22:53.606056 | PRE-RUN END RESULT_NORMAL: [untrusted : opendev.org/openstack/devstack/playbooks/pre.yaml@master]
+2026-10-15 18:22:53.610446 | PRE-RUN START: [trusted : cinderci-sf.dev.purestorage.com/thirdparty-ci-config/playbooks/devstack/pre-devstack.yaml@master]
+2026-10-15 18:22:54.098958 | 
+2026-10-15 18:22:54.099088 | PLAY [all]
+2026-10-15 18:22:54.117256 | 
+2026-10-15 18:22:54.117348 | TASK [Add FQDN to /etc/hosts]
+2026-10-15 18:22:54.509535 | controller | changed: line added
+2026-10-15 18:22:54.515049 | 
+2026-10-15 18:22:54.515138 | TASK [Force IPv4 for apt]
+2026-10-15 18:22:54.823381 | controller | Acquire::ForceIPv4 "true";
+2026-10-15 18:22:55.040441 | controller | ok: Runtime: 0:00:00.012613
+2026-10-15 18:22:55.045604 | 
+2026-10-15 18:22:55.045689 | TASK [Use GNU dd on Ubuntu 26.04 (uutils dd breaks O_DIRECT copies)]
+2026-10-15 18:22:55.268850 | controller | Adding 'local diversion of /usr/bin/dd to /usr/bin/dd.uutils'
+2026-10-15 18:22:55.282540 | controller | switched
+2026-10-15 18:22:55.289007 | controller | lrwxrwxrwx+ 1 root root 5 Oct 15 18:22 /usr/bin/dd -> gnudd
+2026-10-15 18:22:55.291106 | controller | dd (coreutils) 9.7
+2026-10-15 18:22:55.568114 | controller | changed
+2026-10-15 18:22:55.574304 | 
+2026-10-15 18:22:55.574381 | TASK [Warn if dd is still uutils]
+2026-10-15 18:22:55.608086 | controller | skipping: Conditional result was False
+2026-10-15 18:22:55.613407 | 
+2026-10-15 18:22:55.613485 | TASK [Show which dd the node runs]
+2026-10-15 18:22:55.641244 | controller | ok:
+2026-10-15 18:22:55.641367 | controller | {
+2026-10-15 18:22:55.641390 | controller |   "dd_provider.stdout_lines": [
+2026-10-15 18:22:55.641406 | controller |     "Adding 'local diversion of /usr/bin/dd to /usr/bin/dd.uutils'",
+2026-10-15 18:22:55.641423 | controller |     "switched",
+2026-10-15 18:22:55.641436 | controller |     "lrwxrwxrwx+ 1 root root 5 Oct 15 18:22 /usr/bin/dd -> gnudd",
+2026-10-15 18:22:55.641459 | controller |     "dd (coreutils) 9.7"
+2026-10-15 18:22:55.641472 | controller |   ]
+2026-10-15 18:22:55.641484 | controller | }
+2026-10-15 18:22:55.646134 | 
+2026-10-15 18:22:55.646209 | TASK [Install cgroup-tools for volume copy throttling]
+2026-10-15 18:22:55.679206 | controller | skipping: Conditional result was False
+2026-10-15 18:22:55.684497 | 
+2026-10-15 18:22:55.684577 | TASK [Create the c-vol unit drop-in directory (throttle job)]
+2026-10-15 18:22:55.717592 | controller | skipping: Conditional result was False
+2026-10-15 18:22:55.723545 | 
+2026-10-15 18:22:55.723631 | TASK [Keep the io controller enabled for cinder-volume (throttle job)]
+2026-10-15 18:22:55.756898 | controller | skipping: Conditional result was False
+2026-10-15 18:22:55.763573 | 
+2026-10-15 18:22:55.763662 | TASK [Install python3-pip]
+2026-10-15 18:23:56.658125 | controller | ERROR
+2026-10-15 18:23:56.658292 | controller | {
+2026-10-15 18:23:56.658320 | controller |   "cache_update_time": 1792088596,
+2026-10-15 18:23:56.658336 | controller |   "cache_updated": true,
+2026-10-15 18:23:56.658350 | controller |   "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"       install 'python3-pip=25.1.1+dfsg-1ubuntu2'' failed: E: Failed to fetch http://mirrors.kernel.org/ubuntu/pool/main/p/python-packaging/python3-packaging_26.0-1_all.deb  Unable to connect to mirrors.kernel.org:http:\nE: Failed to fetch http://mirrors.kernel.org/ubuntu/pool/universe/w/wheel/python3-wheel_0.46.3-2_all.deb  Unable to connect to mirrors.kernel.org:http:\nE: Failed to fetch http://mirrors.kernel.org/ubuntu/pool/universe/p/python-pip/python3-pip_25.1.1%2bdfsg-1ubuntu2_all.deb  Unable to connect to mirrors.kernel.org:http:\nE: Unable to fetch some archives, maybe run apt update or try with --fix-missing?\n",
+2026-10-15 18:23:56.658374 | controller |   "rc": 100
+2026-10-15 18:23:56.658387 | controller | }
+failure
+2026-10-15 18:23:56.659568 | 
+2026-10-15 18:23:56.659625 | PLAY RECAP
+2026-10-15 18:23:56.659660 | controller | ok: 4 changed: 3 unreachable: 0 failed: 1 skipped: 4 rescued: 0 ignored: 0
+2026-10-15 18:23:56.659685 | 
+2026-10-15 18:23:56.731765 | PRE-RUN END RESULT_NORMAL: [trusted : cinderci-sf.dev.purestorage.com/thirdparty-ci-config/playbooks/devstack/pre-devstack.yaml@master]
+2026-10-15 18:23:56.736228 | POST-RUN START: [trusted : cinderci-sf.dev.purestorage.com/thirdparty-ci-config/playbooks/devstack/pure-manila-cleanup.yaml@master]
+2026-10-15 18:23:57.206314 | 
+2026-10-15 18:23:57.206456 | PLAY [all]
+2026-10-15 18:23:57.241729 | 
+2026-10-15 18:23:57.241874 | TASK [Remove leftover FlashArray manila shares]
+2026-10-15 18:23:57.444365 | controller | changed: non-zero return code
+2026-10-15 18:23:57.449248 | 
+2026-10-15 18:23:57.449339 | TASK [Show what the cleanup removed]
+2026-10-15 18:23:57.476490 | controller | ok
+2026-10-15 18:23:57.493548 | 
+2026-10-15 18:23:57.493625 | PLAY RECAP
+2026-10-15 18:23:57.493666 | controller | ok: 2 changed: 1 unreachable: 0 failed: 0 skipped: 0 rescued: 0 ignored: 0
+2026-10-15 18:23:57.493693 | 
+2026-10-15 18:23:57.563227 | POST-RUN END RESULT_NORMAL: [trusted : cinderci-sf.dev.purestorage.com/thirdparty-ci-config/playbooks/devstack/pure-manila-cleanup.yaml@master]
+2026-10-15 18:23:57.567686 | POST-RUN START: [untrusted : opendev.org/openstack/tempest/playbooks/post-tempest.yaml@master]
+2026-10-15 18:23:58.058025 | 
+2026-10-15 18:23:58.058137 | PLAY [tempest]
+2026-10-15 18:23:58.079391 | 
+2026-10-15 18:23:58.079500 | TASK [fetch-subunit-output : Find stestr or testr executable]
+2026-10-15 18:23:58.259016 | controller | changed: non-zero return code
+2026-10-15 18:23:58.264272 | 
+2026-10-15 18:23:58.264371 | TASK [fetch-subunit-output : Get the list of directories with subunit files]
+2026-10-15 18:23:58.277233 | controller | skipping: Conditional result was False
+2026-10-15 18:23:58.282938 | 
+2026-10-15 18:23:58.283020 | LOOP [fetch-subunit-output : Find any inflight partial subunit files]
+2026-10-15 18:23:58.300816 | 
+2026-10-15 18:23:58.300934 | LOOP [fetch-subunit-output : Copy any inflight subunit files]
+2026-10-15 18:23:58.318237 | 
+2026-10-15 18:23:58.318375 | TASK [fetch-subunit-output : Create a temporary file to store the subunit stream]
+2026-10-15 18:23:58.330831 | controller | skipping: Conditional result was False
+2026-10-15 18:23:58.336077 | 
+2026-10-15 18:23:58.336147 | LOOP [fetch-subunit-output : Generate subunit file]
+2026-10-15 18:23:58.353427 | 
+2026-10-15 18:23:58.353550 | TASK [fetch-subunit-output : Copy the combined subunit file to the zuul work directory]
+2026-10-15 18:23:58.366018 | controller | skipping: Conditional result was False
+2026-10-15 18:23:58.371108 | 
+2026-10-15 18:23:58.371180 | TASK [fetch-subunit-output : Remove the temporary file]
+2026-10-15 18:23:58.383518 | controller | skipping: Conditional result was False
+2026-10-15 18:23:58.389920 | 
+2026-10-15 18:23:58.390000 | TASK [fetch-subunit-output : Process and fetch subunit results]
+2026-10-15 18:23:58.402249 | controller | skipping: Conditional result was False
+2026-10-15 18:23:58.411442 | 
+2026-10-15 18:23:58.411514 | TASK [process-stackviz : Devstack checks if stackviz archive exists]
+2026-10-15 18:23:58.700664 | controller | ok
+2026-10-15 18:23:58.705955 | 
+2026-10-15 18:23:58.706045 | TASK [process-stackviz : debug]
+2026-10-15 18:23:58.718650 | controller | skipping: Conditional result was False
+2026-10-15 18:23:58.723624 | 
+2026-10-15 18:23:58.723701 | TASK [process-stackviz : Check if subunit data exists]
+2026-10-15 18:23:58.903146 | controller | ok
+2026-10-15 18:23:58.907835 | 
+2026-10-15 18:23:58.907926 | TASK [process-stackviz : debug]
+2026-10-15 18:23:58.935190 | Subunit file could not be found at /opt/stack/tempest/testrepository.subunit
+2026-10-15 18:23:58.939998 | 
+2026-10-15 18:23:58.940075 | TASK [include_role : ensure-pip]
+2026-10-15 18:23:58.962984 | controller | skipping: Conditional result was False
+2026-10-15 18:23:58.968322 | 
+2026-10-15 18:23:58.968404 | TASK [process-stackviz : pip]
+2026-10-15 18:23:58.981190 | controller | skipping: Conditional result was False
+2026-10-15 18:23:58.987544 | 
+2026-10-15 18:23:58.987619 | TASK [process-stackviz : Deploy stackviz static html+js]
+2026-10-15 18:23:59.510287 | controller | skipping: Conditional result was False
+2026-10-15 18:23:59.516119 | 
+2026-10-15 18:23:59.516204 | TASK [process-stackviz : Check if dstat data exists]
+2026-10-15 18:23:59.529005 | controller | skipping: Conditional result was False
+2026-10-15 18:23:59.534321 | 
+2026-10-15 18:23:59.534396 | TASK [process-stackviz : Run stackviz with dstat]
+2026-10-15 18:24:00.055741 | controller | skipping: Conditional result was False
+2026-10-15 18:24:00.082347 | 
+2026-10-15 18:24:00.082453 | TASK [process-stackviz : Run stackviz without dstat]
+2026-10-15 18:24:00.605664 | controller | skipping: Conditional result was False
+2026-10-15 18:24:00.628671 | 
+2026-10-15 18:24:00.628754 | PLAY RECAP
+2026-10-15 18:24:00.628791 | controller | ok: 4 changed: 1 unreachable: 0 failed: 0 skipped: 15 rescued: 0 ignored: 0
+2026-10-15 18:24:00.628810 | 
+2026-10-15 18:24:00.704778 | POST-RUN END RESULT_NORMAL: [untrusted : opendev.org/openstack/tempest/playbooks/post-tempest.yaml@master]
+2026-10-15 18:24:00.708428 | POST-RUN START: [untrusted : opendev.org/openstack/devstack/playbooks/post.yaml@master]
+2026-10-15 18:24:01.252849 | 
+2026-10-15 18:24:01.253102 | PLAY [all]
+2026-10-15 18:24:01.276730 | 
+2026-10-15 18:24:01.276851 | TASK [export-devstack-journal : Ensure /home/zuul/logs exists]
+2026-10-15 18:24:01.669529 | controller | changed
+2026-10-15 18:24:01.675273 | 
+2026-10-15 18:24:01.675369 | TASK [export-devstack-journal : Export legacy stack screen log files]
+2026-10-15 18:24:02.700108 | controller | ok: Runtime: 0:00:00.301813
+2026-10-15 18:24:02.708754 | 
+2026-10-15 18:24:02.708872 | TASK [export-devstack-journal : Export legacy syslog.txt]
+2026-10-15 18:24:03.244355 | controller | ok: Runtime: 0:00:00.009447
+2026-10-15 18:24:03.252787 | 
+2026-10-15 18:24:03.252899 | TASK [export-devstack-journal : Export journal]
+2026-10-15 18:24:03.787751 | controller | ok: Runtime: 0:00:00.013724
+2026-10-15 18:24:03.796804 | 
+2026-10-15 18:24:03.796922 | TASK [export-devstack-journal : Save journal README]
+2026-10-15 18:24:04.395470 | controller | changed
+2026-10-15 18:24:04.412406 | 
+2026-10-15 18:24:04.412545 | TASK [apache-logs-conf : Ensure /home/zuul/apache exists]
+2026-10-15 18:24:04.597167 | controller | changed
+2026-10-15 18:24:04.630130 | 
+2026-10-15 18:24:04.630248 | TASK [apache-logs-conf : Find logs]
+2026-10-15 18:24:04.884216 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:04.892036 | 
+2026-10-15 18:24:04.892152 | LOOP [apache-logs-conf : Dereference files]
+2026-10-15 18:24:04.914148 | 
+2026-10-15 18:24:04.914336 | LOOP [apache-logs-conf : Create hard links]
+2026-10-15 18:24:04.936417 | 
+2026-10-15 18:24:04.936613 | TASK [apache-logs-conf : Find logs]
+2026-10-15 18:24:04.960106 | 
+2026-10-15 18:24:04.960307 | LOOP [apache-logs-conf : Dereference files]
+2026-10-15 18:24:04.982489 | 
+2026-10-15 18:24:04.982705 | LOOP [apache-logs-conf : Create hard links]
+2026-10-15 18:24:05.006913 | 
+2026-10-15 18:24:05.007144 | TASK [apache-logs-conf : Ensure /home/zuul/apache_config apache_config exists]
+2026-10-15 18:24:05.187963 | controller | changed
+2026-10-15 18:24:05.193458 | 
+2026-10-15 18:24:05.193554 | TASK [apache-logs-conf : Define config paths]
+2026-10-15 18:24:05.211892 | controller | ok
+2026-10-15 18:24:05.216666 | 
+2026-10-15 18:24:05.216749 | TASK [apache-logs-conf : Discover configurations]
+2026-10-15 18:24:05.395772 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:05.400741 | 
+2026-10-15 18:24:05.400835 | LOOP [apache-logs-conf : Dereference configurations]
+2026-10-15 18:24:05.418757 | 
+2026-10-15 18:24:05.418882 | LOOP [apache-logs-conf : Link configurations]
+2026-10-15 18:24:05.441361 | 
+2026-10-15 18:24:05.441494 | TASK [capture-performance-data : Generate statistics]
+2026-10-15 18:24:05.804604 | controller | /opt/stack/devstack//inc/python: line 43: -m: command not found
+2026-10-15 18:24:05.811954 | controller | Using python 3.14 to install setuptools
+2026-10-15 18:24:05.826585 | controller | /usr/bin/python3.14: No module named pip
+2026-10-15 18:24:05.832954 | controller | /bin/bash: line 4: /opt/stack/data/venv/bin/python3: No such file or directory
+2026-10-15 18:24:05.962625 | controller | ERROR
+2026-10-15 18:24:05.962767 | controller | {
+2026-10-15 18:24:05.962807 | controller |   "delta": "0:00:00.189805",
+2026-10-15 18:24:05.962830 | controller |   "end": "2026-10-15 18:24:05.833462",
+2026-10-15 18:24:05.962845 | controller |   "msg": "non-zero return code",
+2026-10-15 18:24:05.962862 | controller |   "rc": 127,
+2026-10-15 18:24:05.962876 | controller |   "start": "2026-10-15 18:24:05.643657"
+2026-10-15 18:24:05.962888 | controller | }
+2026-10-15 18:24:05.962910 | controller | ERROR: Ignoring Errors
+2026-10-15 18:24:05.973424 | 
+2026-10-15 18:24:05.973511 | TASK [devstack-project-conf : Ensure /home/zuul/etc exists]
+2026-10-15 18:24:06.162440 | controller | changed
+2026-10-15 18:24:06.167406 | 
+2026-10-15 18:24:06.167476 | LOOP [devstack-project-conf : Check which projects have a config folder]
+2026-10-15 18:24:08.593610 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:08.599253 | 
+2026-10-15 18:24:08.599328 | LOOP [devstack-project-conf : Copy configuration files]
+2026-10-15 18:24:08.621760 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.622000 | 
+2026-10-15 18:24:08.623893 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.626438 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.631733 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.632405 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.633026 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.639371 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.644908 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.645463 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.646075 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.646627 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.652104 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.652649 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.653249 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.654673 | controller | skipping: Conditional result was False
+2026-10-15 18:24:08.674982 | 
+2026-10-15 18:24:08.675058 | TASK [devstack-project-conf : Check if openstack has a config folder]
+2026-10-15 18:24:08.864743 | controller | ok
+2026-10-15 18:24:08.869689 | 
+2026-10-15 18:24:08.869769 | TASK [devstack-project-conf : Copy configuration files]
+2026-10-15 18:24:09.393765 | controller | skipping: Conditional result was False
+2026-10-15 18:24:09.403753 | 
+2026-10-15 18:24:09.403851 | TASK [capture-system-logs : Stage various logs and reports]
+2026-10-15 18:24:09.665118 | controller | /usr/bin/python3: No module named pip
+2026-10-15 18:24:10.252541 | controller | grep: /home/zuul/apache/*.log: No such file or directory
+2026-10-15 18:24:10.450644 | controller | ok: Runtime: 0:00:00.623497
+2026-10-15 18:24:10.460134 | 
+2026-10-15 18:24:10.460204 | LOOP [stage-output : Register sources]
+2026-10-15 18:24:18.624788 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:18.631273 | 
+2026-10-15 18:24:18.631350 | TASK [stage-output : Check sudo]
+2026-10-15 18:24:19.155494 | controller | ok: Runtime: 0:00:00.007908
+2026-10-15 18:24:19.161026 | 
+2026-10-15 18:24:19.161107 | LOOP [stage-output : Set source and destination for files and folders]
+2026-10-15 18:24:19.272995 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.273207 | 
+2026-10-15 18:24:19.275059 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.277336 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.282556 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.313335 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.313651 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.315611 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.320827 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.321148 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.321421 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.321687 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.326798 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.339578 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.339911 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.341644 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.341998 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.342277 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.359549 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.359861 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.362005 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.362329 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.362613 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.368653 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.368941 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.369223 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.375222 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.416546 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.416920 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.468055 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.478553 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.489370 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.489727 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.490066 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.490515 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.502087 | controller | Output suppressed because no_log was given
+2026-10-15 18:24:19.509541 | 
+2026-10-15 18:24:19.509622 | TASK [stage-output : Build a list of source, dest dictionaries]
+2026-10-15 18:24:19.557455 | controller | ok
+2026-10-15 18:24:19.563266 | 
+2026-10-15 18:24:19.563344 | LOOP [stage-output : Ensure target folders exist]
+2026-10-15 18:24:19.753875 | controller | changed: "docs"
+2026-10-15 18:24:19.913645 | controller | changed: "artifacts"
+2026-10-15 18:24:20.074633 | controller | ok: "logs"
+2026-10-15 18:24:20.089500 | 
+2026-10-15 18:24:20.089598 | LOOP [stage-output : Copy files and folders to staging folder]
+2026-10-15 18:24:20.297255 | controller | ok: Item: Runtime: 0:00:00.003654
+2026-10-15 18:24:20.297474 | controller | changed: All items complete
+2026-10-15 18:24:20.297502 | 
+2026-10-15 18:24:20.462034 | controller | ok: Item: Runtime: 0:00:00.002577
+2026-10-15 18:24:20.627518 | controller | ok: Item: Runtime: 0:00:00.003365
+2026-10-15 18:24:20.793793 | controller | ok: Item: Runtime: 0:00:00.002557
+2026-10-15 18:24:20.961764 | controller | ok: Item: Runtime: 0:00:00.002580
+2026-10-15 18:24:21.125863 | controller | ok: Item: Runtime: 0:00:00.002437
+2026-10-15 18:24:21.292107 | controller | ok: Item: Runtime: 0:00:00.002592
+2026-10-15 18:24:21.457985 | controller | ok: Item: Runtime: 0:00:00.002579
+2026-10-15 18:24:21.624192 | controller | ok: Item: Runtime: 0:00:00.002593
+2026-10-15 18:24:21.790659 | controller | ok: Item: Runtime: 0:00:00.002587
+2026-10-15 18:24:21.958655 | controller | ok: Item: Runtime: 0:00:00.002621
+2026-10-15 18:24:22.126576 | controller | ok: Item: Runtime: 0:00:00.002556
+2026-10-15 18:24:22.290940 | controller | ok: Item: Runtime: 0:00:00.002632
+2026-10-15 18:24:22.458184 | controller | ok: Item: Runtime: 0:00:00.002556
+2026-10-15 18:24:22.622345 | controller | ok: Item: Runtime: 0:00:00.002562
+2026-10-15 18:24:22.788850 | controller | ok: Item: Runtime: 0:00:00.002512
+2026-10-15 18:24:22.948153 | controller | ok: Item: Runtime: 0:00:00.002625
+2026-10-15 18:24:22.968219 | 
+2026-10-15 18:24:22.968311 | TASK [stage-output : Make all log files readable]
+2026-10-15 18:24:23.157412 | controller | changed
+2026-10-15 18:24:23.162606 | 
+2026-10-15 18:24:23.162696 | TASK [stage-output : Rename log files that match extensions_to_txt]
+2026-10-15 18:24:23.443252 | controller | changed: Renamed files for staging.
+2026-10-15 18:24:23.449081 | 
+2026-10-15 18:24:23.449161 | TASK [stage-output : Discover log files for compression]
+2026-10-15 18:24:23.461853 | controller | skipping: Conditional result was False
+2026-10-15 18:24:23.467158 | 
+2026-10-15 18:24:23.467230 | LOOP [stage-output : Archive everything from logs]
+2026-10-15 18:24:23.489987 | 
+2026-10-15 18:24:23.490125 | TASK [fetch-devstack-log-dir : Collect devstack logs]
+2026-10-15 18:24:23.921251 | controller | changed:
+2026-10-15 18:24:23.921390 | controller | cd+++++++++ logs/
+2026-10-15 18:24:23.921413 | controller | >f+++++++++ logs/deprecations_log.txt
+2026-10-15 18:24:23.921430 | controller | >f+++++++++ logs/devstack.journal.README.txt
+2026-10-15 18:24:23.921444 | controller | >f+++++++++ logs/devstack.journal.gz
+2026-10-15 18:24:23.921458 | controller | >f+++++++++ logs/df.txt
+2026-10-15 18:24:23.921470 | controller | >f+++++++++ logs/dpkg-l.txt
+2026-10-15 18:24:23.921483 | controller | >f+++++++++ logs/iptables.txt
+2026-10-15 18:24:23.921496 | controller | >f+++++++++ logs/listen53.txt
+2026-10-15 18:24:23.921508 | controller | >f+++++++++ logs/local_conf.txt
+2026-10-15 18:24:23.921520 | controller | >f+++++++++ logs/mount.txt
+2026-10-15 18:24:23.921538 | controller | >f+++++++++ logs/performance.json
+2026-10-15 18:24:23.921560 | controller | >f+++++++++ logs/pip3-freeze.txt
+2026-10-15 18:24:23.921575 | controller | >f+++++++++ logs/resolv_conf.txt
+2026-10-15 18:24:23.921596 | controller | >f+++++++++ logs/services.txt
+2026-10-15 18:24:23.921610 | controller | >f+++++++++ logs/sudoers
+2026-10-15 18:24:23.921622 | controller | >f+++++++++ logs/syslog.txt
+2026-10-15 18:24:23.921644 | controller | >f+++++++++ logs/unbound_log.txt
+2026-10-15 18:24:23.921659 | controller | cd+++++++++ logs/apache/
+2026-10-15 18:24:23.921685 | controller | cd+++++++++ logs/apache_config/
+2026-10-15 18:24:23.921700 | controller | cd+++++++++ logs/etc/
+2026-10-15 18:24:23.921717 | controller | cd+++++++++ logs/sudoers.d/
+2026-10-15 18:24:23.921730 | controller | >f+++++++++ logs/sudoers.d/50_stack_sh
+2026-10-15 18:24:23.921742 | controller | >f+++++++++ logs/sudoers.d/51_tempest_sh
+2026-10-15 18:24:23.921759 | controller | >f+++++++++ logs/sudoers.d/README
+2026-10-15 18:24:23.921771 | controller | >f+++++++++ logs/sudoers.d/zuul
+2026-10-15 18:24:23.932305 | 
+2026-10-15 18:24:23.932384 | TASK [Check if a tempest log exits]
+2026-10-15 18:24:24.131563 | controller | ok
+2026-10-15 18:24:24.136461 | 
+2026-10-15 18:24:24.136539 | TASK [Link post-devstack tempest.log]
+2026-10-15 18:24:24.149369 | controller | skipping: Conditional result was False
+2026-10-15 18:24:24.154586 | 
+2026-10-15 18:24:24.154657 | TASK [Capture most recent qemu crash dump, if any]
+2026-10-15 18:24:24.378454 | controller | /bin/bash: line 1: coredumpctl: command not found
+2026-10-15 18:24:24.702711 | controller | ERROR
+2026-10-15 18:24:24.702853 | controller | {
+2026-10-15 18:24:24.702879 | controller |   "delta": "0:00:00.002694",
+2026-10-15 18:24:24.702895 | controller |   "end": "2026-10-15 18:24:24.378694",
+2026-10-15 18:24:24.702908 | controller |   "msg": "non-zero return code",
+2026-10-15 18:24:24.702921 | controller |   "rc": 127,
+2026-10-15 18:24:24.702934 | controller |   "start": "2026-10-15 18:24:24.376000"
+2026-10-15 18:24:24.702946 | controller | }
+2026-10-15 18:24:24.702976 | controller | ERROR: Ignoring Errors
+2026-10-15 18:24:24.708192 | 
+2026-10-15 18:24:24.708273 | TASK [Collect Guru Meditation Reports from OpenStack services]
+2026-10-15 18:24:25.230111 | controller | ERROR
+2026-10-15 18:24:25.230306 | controller | {
+2026-10-15 18:24:25.230331 | controller |   "delta": "0:00:00.021261",
+2026-10-15 18:24:25.230347 | controller |   "end": "2026-10-15 18:24:24.927671",
+2026-10-15 18:24:25.230362 | controller |   "msg": "non-zero return code",
+2026-10-15 18:24:25.230374 | controller |   "rc": -12,
+2026-10-15 18:24:25.230387 | controller |   "start": "2026-10-15 18:24:24.906410"
+2026-10-15 18:24:25.230399 | controller | }
+2026-10-15 18:24:25.230417 | controller | ERROR: Ignoring Errors
+2026-10-15 18:24:25.248836 | 
+2026-10-15 18:24:25.248912 | PLAY RECAP
+2026-10-15 18:24:25.248952 | controller | ok: 27 changed: 18 unreachable: 0 failed: 0 skipped: 12 rescued: 0 ignored: 3
+2026-10-15 18:24:25.248982 | 
+2026-10-15 18:24:25.330058 | POST-RUN END RESULT_NORMAL: [untrusted : opendev.org/openstack/devstack/playbooks/post.yaml@master]
+2026-10-15 18:24:25.334556 | POST-RUN START: [trusted : cinderci-sf.dev.purestorage.com/thirdparty-ci-config/playbooks/base/post.yaml@master]
+2026-10-15 18:24:25.833839 | 
+2026-10-15 18:24:25.833949 | PLAY [all]
+2026-10-15 18:24:25.852387 | 
+2026-10-15 18:24:25.852486 | TASK [include_role : fetch-output]
+2026-10-15 18:24:25.880265 | controller | ok
+2026-10-15 18:24:25.894563 | 
+2026-10-15 18:24:25.894666 | TASK [fetch-output : Set log path for multiple nodes]
+2026-10-15 18:24:25.948108 | controller | skipping: Conditional result was False
+2026-10-15 18:24:25.953588 | 
+2026-10-15 18:24:25.953684 | TASK [fetch-output : Set log path for single node]
+2026-10-15 18:24:25.991143 | controller | ok
+2026-10-15 18:24:25.996049 | 
+2026-10-15 18:24:25.996132 | LOOP [fetch-output : Ensure local output dirs]
+2026-10-15 18:24:26.298983 | controller -> localhost | ok: "/var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/work/logs"
+2026-10-15 18:24:26.469385 | controller -> localhost | changed: "/var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/work/artifacts"
+2026-10-15 18:24:26.641868 | controller -> localhost | changed: "/var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/work/docs"
+2026-10-15 18:24:26.651460 | 
+2026-10-15 18:24:26.651551 | LOOP [fetch-output : Collect logs, artifacts and docs]
+2026-10-15 18:24:27.090273 | controller | changed: .d..t...... ./
+2026-10-15 18:24:27.090471 | controller | changed: All items complete
+2026-10-15 18:24:27.090499 | 
+2026-10-15 18:24:27.386024 | controller | changed: .d..t...... ./
+2026-10-15 18:24:27.676621 | controller | changed: .d..t...... ./
+2026-10-15 18:24:27.694936 | 
+2026-10-15 18:24:27.695032 | TASK [include_role : fetch-output-openshift]
+2026-10-15 18:24:27.707779 | controller | skipping: Conditional result was False
+2026-10-15 18:24:27.713346 | 
+2026-10-15 18:24:27.713424 | LOOP [merge-output-to-logs : Move artifacts and docs to logs dir]
+2026-10-15 18:24:28.026533 | controller -> localhost | ok: Item: artifacts Runtime: 0:00:00.004922
+2026-10-15 18:24:28.203404 | controller -> localhost | ok: Item: docs Runtime: 0:00:00.004495
+2026-10-15 18:24:28.236268 | 
+2026-10-15 18:24:28.236354 | PLAY [localhost]
+2026-10-15 18:24:28.254164 | 
+2026-10-15 18:24:28.254261 | TASK [add-fileserver : Create SSH private key tempfile]
+2026-10-15 18:24:28.524356 | localhost | changed
+2026-10-15 18:24:28.549299 | 
+2026-10-15 18:24:28.549392 | TASK [add-fileserver : Create SSH private key from secret]
+2026-10-15 18:24:29.060695 | localhost | changed
+2026-10-15 18:24:29.065301 | 
+2026-10-15 18:24:29.065444 | TASK [add-fileserver : Add fileserver ssh key]
+2026-10-15 18:24:29.263729 | localhost | Identity added: /var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/work/tmp/ansible.o5qekzpg (/var/lib/zuul/builds/27549b6ac66b46328682166d85f35a49/work/tmp/ansible.o5qekzpg)
+2026-10-15 18:24:29.263938 | localhost | ok: Runtime: 0:00:00.004793
+2026-10-15 18:24:29.267763 | 
+2026-10-15 18:24:29.267833 | TASK [add-fileserver : Remove SSH private key from disk]
+2026-10-15 18:24:29.465620 | localhost | ok: Runtime: 0:00:00.003334
+2026-10-15 18:24:29.469873 | 
+2026-10-15 18:24:29.469947 | TASK [add-fileserver : Add fileserver to inventory]
+2026-10-15 18:24:29.517229 | localhost | changed
+2026-10-15 18:24:29.521087 | 
+2026-10-15 18:24:29.521166 | TASK [add-fileserver : Add fileserver server to known hosts]
+2026-10-15 18:24:29.780049 | localhost | changed
+2026-10-15 18:24:29.787353 | 
+2026-10-15 18:24:29.787433 | TASK [generate-zuul-manifest : Generate Zuul manifest]
+2026-10-15 18:24:30.036368 | localhost | changed
+2026-10-15 18:24:30.040386 | 
+2026-10-15 18:24:30.040459 | TASK [generate-zuul-manifest : Return Zuul manifest URL to Zuul]
+2026-10-15 18:24:30.066890 | localhost | ok
+2026-10-15 18:24:30.074699 | 
+2026-10-15 18:24:30.074787 | TASK [ara-report : Check that ARA is installed]
+2026-10-15 18:24:30.283908 | localhost | ok: Runtime: 0:00:00.003140
+2026-10-15 18:24:30.288587 | 
+2026-10-15 18:24:30.288667 | TASK [ara-report : Warn if ARA is not installed]
+2026-10-15 18:24:30.315471 | ARA is not installed, no report will be available.
+2026-10-15 18:24:30.319588 | 
+2026-10-15 18:24:30.319686 | TASK [ara-report : Check that the ARA database exists]
+2026-10-15 18:24:30.497993 | localhost | ok
+2026-10-15 18:24:30.502234 | 
+2026-10-15 18:24:30.502308 | TASK [ara-report : Warn if no database is found]
+2026-10-15 18:24:30.529071 | No report will be available because the ARA database was not found.
+2026-10-15 18:24:30.533424 | 
+2026-10-15 18:24:30.533493 | TASK [ara-report : Validate role configuration]
+2026-10-15 18:24:30.559726 | localhost | ok: All assertions passed
+2026-10-15 18:24:30.564382 | 
+2026-10-15 18:24:30.564454 | TASK [ara-report : Generate ARA HTML output]
+2026-10-15 18:24:30.577295 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.581386 | 
+2026-10-15 18:24:30.581455 | TASK [ara-report : Compress ARA HTML output]
+2026-10-15 18:24:30.594128 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.598508 | 
+2026-10-15 18:24:30.598584 | TASK [ara-report : Return ARA report]
+2026-10-15 18:24:30.611026 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.615349 | 
+2026-10-15 18:24:30.615416 | TASK [ara-report : Create the ARA database report directory]
+2026-10-15 18:24:30.627813 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.632154 | 
+2026-10-15 18:24:30.632222 | TASK [ara-report : Save the ARA database]
+2026-10-15 18:24:30.644609 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.648833 | 
+2026-10-15 18:24:30.648906 | TASK [ara-report : Return ARA report]
+2026-10-15 18:24:30.662287 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.669912 | 
+2026-10-15 18:24:30.669996 | TASK [log-classify : Check for pre-installed log-classify]
+2026-10-15 18:24:30.702974 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.707512 | 
+2026-10-15 18:24:30.707587 | TASK [log-classify : Look for depends-on location]
+2026-10-15 18:24:30.740714 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.745937 | 
+2026-10-15 18:24:30.746052 | TASK [log-classify : Clone project]
+2026-10-15 18:24:30.789067 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.795047 | 
+2026-10-15 18:24:30.795133 | TASK [log-classify : Set clone location]
+2026-10-15 18:24:30.828170 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.832460 | 
+2026-10-15 18:24:30.832542 | TASK [log-classify : Install from sources]
+2026-10-15 18:24:30.865451 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.869822 | 
+2026-10-15 18:24:30.869902 | TASK [log-classify : Get log-classify command path]
+2026-10-15 18:24:30.903288 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.907928 | 
+2026-10-15 18:24:30.908029 | TASK [log-classify : Set logclassify_cmd fact]
+2026-10-15 18:24:30.940991 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.945758 | 
+2026-10-15 18:24:30.945847 | TASK [log-classify : Foce the model_per_project option for known job to have different output per project]
+2026-10-15 18:24:30.978664 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:30.982865 | 
+2026-10-15 18:24:30.982940 | TASK [log-classify : Set model name]
+2026-10-15 18:24:31.025805 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.030932 | 
+2026-10-15 18:24:31.031029 | TASK [log-classify : Set model path]
+2026-10-15 18:24:31.064072 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.069024 | 
+2026-10-15 18:24:31.069112 | LOOP [log-classify : Create directories]
+2026-10-15 18:24:31.106244 | 
+2026-10-15 18:24:31.106388 | TASK [log-classify : Download pre-built model]
+2026-10-15 18:24:31.139560 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.145355 | 
+2026-10-15 18:24:31.145435 | TASK [log-classify : Check pre-built model]
+2026-10-15 18:24:31.188294 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.192644 | 
+2026-10-15 18:24:31.192735 | TASK [log-classify : Build new model]
+2026-10-15 18:24:31.225567 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.229914 | 
+2026-10-15 18:24:31.230010 | TASK [log-classify : Get job-output from the executor]
+2026-10-15 18:24:31.262795 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.267101 | 
+2026-10-15 18:24:31.267182 | TASK [log-classify : Detect anomalies]
+2026-10-15 18:24:31.310125 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.314539 | 
+2026-10-15 18:24:31.314613 | LOOP [log-classify : Fetch report]
+2026-10-15 18:24:31.348778 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.349019 | 
+2026-10-15 18:24:31.350349 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.361695 | 
+2026-10-15 18:24:31.361770 | TASK [log-classify : Fetch model]
+2026-10-15 18:24:31.394522 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.398820 | 
+2026-10-15 18:24:31.398895 | TASK [log-classify : Write model name]
+2026-10-15 18:24:31.441872 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.446010 | 
+2026-10-15 18:24:31.446095 | TASK [log-classify : Return the report artifact]
+2026-10-15 18:24:31.488999 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:31.509950 | 
+2026-10-15 18:24:31.510063 | PLAY [localhost]
+2026-10-15 18:24:31.523062 | 
+2026-10-15 18:24:31.523158 | TASK [scrub-api-tokens : Scrub API tokens from the logs before they are published]
+2026-10-15 18:24:31.762487 | localhost | ok
+2026-10-15 18:24:31.769597 | 
+2026-10-15 18:24:31.769702 | TASK [upload-logs-to-github : Set log directory path]
+2026-10-15 18:24:31.816242 | localhost | ok
+2026-10-15 18:24:31.820999 | 
+2026-10-15 18:24:31.821072 | TASK [upload-logs-to-github : Check if log directory exists]
+2026-10-15 18:24:32.039721 | localhost | ok
+2026-10-15 18:24:32.044472 | 
+2026-10-15 18:24:32.044555 | TASK [upload-logs-to-github : Ensure logs directory exists before proceeding]
+2026-10-15 18:24:32.077660 | localhost | skipping: Conditional result was False
+2026-10-15 18:24:32.082332 | 
+2026-10-15 18:24:32.082410 | TASK [upload-logs-to-github : Create a temporary directory for Git operations]
+2026-10-15 18:24:32.301690 | localhost | changed
+2026-10-15 18:24:32.305938 | 
+2026-10-15 18:24:32.306052 | TASK [upload-logs-to-github : Set fact for temporary Git directory]
+2026-10-15 18:24:32.353283 | localhost | ok
+2026-10-15 18:24:32.357346 | 
+2026-10-15 18:24:32.357426 | TASK [upload-logs-to-github : Create a tempfile for the deploy key (kept out of the published logs)]
+2026-10-15 18:24:32.557326 | localhost | changed
+2026-10-15 18:24:32.561513 | 
+2026-10-15 18:24:32.561592 | TASK [upload-logs-to-github : Write SSH deploy key to the tempfile]
+2026-10-15 18:24:32.911912 | localhost | changed
+2026-10-15 18:24:32.916229 | 
+2026-10-15 18:24:32.916304 | TASK [upload-logs-to-github : Set log destination (relative) path fact]
+2026-10-15 18:24:32.963103 | localhost | ok
+2026-10-15 18:24:32.967137 | 
+2026-10-15 18:24:32.967217 | TASK [upload-logs-to-github : Publish this build's logs to gh-pages (append-only, race-safe)]
