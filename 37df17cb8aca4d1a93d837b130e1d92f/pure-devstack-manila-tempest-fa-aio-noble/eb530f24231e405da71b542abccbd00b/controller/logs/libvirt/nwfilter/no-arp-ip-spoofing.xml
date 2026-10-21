@@ -1,0 +1,14 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh nwfilter-edit no-arp-ip-spoofing
+or other application using the libvirt API.
+-->
+
+<filter name='no-arp-ip-spoofing' chain='arp-ip' priority='-510'>
+  <uuid>0215ccb1-dd0c-43c2-a747-3f52de1b0195</uuid>
+  <rule action='return' direction='out' priority='400'>
+    <arp arpsrcipaddr='$IP'/>
+  </rule>
+  <rule action='drop' direction='out' priority='1000'/>
+</filter>
