@@ -1,0 +1,15 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh nwfilter-edit qemu-announce-self
+or other application using the libvirt API.
+-->
+
+<filter name='qemu-announce-self' chain='root'>
+  <uuid>1d94709b-4c99-4a88-8b3a-6ee0a6e520c4</uuid>
+  <rule action='accept' direction='out' priority='500'>
+    <mac protocolid='0x835'/>
+  </rule>
+  <filterref filter='qemu-announce-self-rarp'/>
+  <filterref filter='no-other-rarp-traffic'/>
+</filter>
