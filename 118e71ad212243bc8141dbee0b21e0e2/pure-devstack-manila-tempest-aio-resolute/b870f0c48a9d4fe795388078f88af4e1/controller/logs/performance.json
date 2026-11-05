@@ -1,0 +1,170 @@
+{
+  "services": [
+    {
+      "service": "devstack@memory_tracker.service",
+      "MemoryCurrent": 2301952
+    },
+    {
+      "service": "devstack@etcd.service",
+      "MemoryCurrent": 137322496
+    },
+    {
+      "service": "devstack@dstat.service",
+      "MemoryCurrent": 31559680
+    },
+    {
+      "service": "devstack@keystone.service",
+      "MemoryCurrent": 351281152
+    },
+    {
+      "service": "devstack@file_tracker.service",
+      "MemoryCurrent": 1814528
+    },
+    {
+      "service": "devstack@openstack-cli-server.service",
+      "MemoryCurrent": 107544576
+    },
+    {
+      "service": "apache2.service",
+      "MemoryCurrent": 9351168
+    }
+  ],
+  "db": [
+    {
+      "db": "keystone",
+      "op": "SELECT",
+      "count": 17250
+    },
+    {
+      "db": "keystone",
+      "op": "INSERT",
+      "count": 78
+    },
+    {
+      "db": "keystone",
+      "op": "UPDATE",
+      "count": 1
+    }
+  ],
+  "processes": [
+    {
+      "cmd": "/usr/lib/erlang/erts-15.2.7.4/bin/beam.smp",
+      "pid": 21350,
+      "args": "-W w -MBas ageffcbf -MHas ageffcbf -MBlmbcs 512 -MHlmbcs 512 -MMmcs 30 -pc unicode -P 1048576 -t 5000000 -stbt db -zdbbl 128000 -sbwt none -sbwtdcpu none -sbwtdio none -- -root /usr/lib/erlang -bindir /usr/lib/erlang/erts-15.2.7.4/bin -progname erl -- -home /var/lib/rabbitmq -- -pa  -noshell -noinput -s rabbit boot -boot start_sasl -syslog logger [] -syslog syslog_error_logger false -kernel prevent_overlapping_partitions false --",
+      "rss": 110157824,
+      "rss_peak": 132689920,
+      "rss_anon": 64983040,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/lib/os_mon-2.10.1/priv/bin/memsup",
+      "pid": 21393,
+      "args": "",
+      "rss": 1789952,
+      "rss_peak": 1789952,
+      "rss_anon": 94208,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/lib/os_mon-2.10.1/priv/bin/cpu_sup",
+      "pid": 21394,
+      "args": "",
+      "rss": 1794048,
+      "rss_peak": 1794048,
+      "rss_anon": 98304,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/erts-15.2.7.4/bin/inet_gethost",
+      "pid": 21396,
+      "args": "4",
+      "rss": 2347008,
+      "rss_peak": 2347008,
+      "rss_anon": 110592,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/erts-15.2.7.4/bin/inet_gethost",
+      "pid": 21397,
+      "args": "4",
+      "rss": 1609728,
+      "rss_peak": 1609728,
+      "rss_anon": 131072,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/sbin/mysqld",
+      "pid": 46718,
+      "args": "",
+      "rss": 580345856,
+      "rss_peak": 580345856,
+      "rss_anon": 532467712,
+      "swap": 0
+    },
+    {
+      "cmd": "/opt/stack/bin/etcd",
+      "pid": 49131,
+      "args": "--name np0000050275 --data-dir /opt/stack/data/etcd --initial-cluster-state new --initial-cluster-token etcd-cluster-01 --initial-cluster np0000050275=http://192.168.1.140:2380 --initial-advertise-peer-urls http://192.168.1.140:2380 --advertise-client-urls http://192.168.1.140:2379 --listen-peer-urls http://0.0.0.0:2380 --listen-client-urls http://192.168.1.140:2379 --log-level=debug",
+      "rss": 29233152,
+      "rss_peak": 29233152,
+      "rss_anon": 7950336,
+      "swap": 0
+    },
+    {
+      "cmd": "keystoneuWSGI",
+      "pid": 50364,
+      "args": "master",
+      "rss": 19394560,
+      "rss_peak": 19394560,
+      "rss_anon": 6664192,
+      "swap": 0
+    },
+    {
+      "cmd": "keystoneuWSGI",
+      "pid": 50365,
+      "args": "worker 1",
+      "rss": 199970816,
+      "rss_peak": 199970816,
+      "rss_anon": 169328640,
+      "swap": 0
+    },
+    {
+      "cmd": "keystoneuWSGI",
+      "pid": 50366,
+      "args": "worker 2",
+      "rss": 199479296,
+      "rss_peak": 199479296,
+      "rss_anon": 168837120,
+      "swap": 0
+    }
+  ],
+  "api": [
+    {
+      "service": "identity",
+      "log": "tls-proxy_access.log",
+      "largest": 5983,
+      "openstacksdk-GET": 489,
+      "openstacksdk-POST": 126,
+      "openstacksdk-PUT": 24
+    },
+    {
+      "service": "identity",
+      "log": "access.log",
+      "largest": 2270,
+      "openstacksdk-GET": 489,
+      "openstacksdk-POST": 126,
+      "openstacksdk-PUT": 24
+    }
+  ],
+  "swap": {
+    "pswpin": 0,
+    "pswpout": 3,
+    "zswpin": 0,
+    "zswpout": 20
+  },
+  "report": {
+    "timestamp": "2026-11-05T14:38:04.546447",
+    "hostname": "np0000050275",
+    "version": 2
+  }
+}
