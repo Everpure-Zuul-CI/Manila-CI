@@ -1,0 +1,750 @@
+{
+  "services": [
+    {
+      "service": "devstack@m-dat.service",
+      "MemoryCurrent": 168419328
+    },
+    {
+      "service": "devstack@dstat.service",
+      "MemoryCurrent": 30822400
+    },
+    {
+      "service": "devstack@etcd.service",
+      "MemoryCurrent": 140455936
+    },
+    {
+      "service": "devstack@neutron-rpc-server.service",
+      "MemoryCurrent": 211558400
+    },
+    {
+      "service": "devstack@neutron-api.service",
+      "MemoryCurrent": 499617792
+    },
+    {
+      "service": "devstack@m-sch.service",
+      "MemoryCurrent": 176865280
+    },
+    {
+      "service": "devstack@m-shr.service",
+      "MemoryCurrent": 292143104
+    },
+    {
+      "service": "devstack@n-cond-cell1.service",
+      "MemoryCurrent": 204750848
+    },
+    {
+      "service": "devstack@n-cpu.service",
+      "MemoryCurrent": 167731200
+    },
+    {
+      "service": "devstack@openstack-cli-server.service",
+      "MemoryCurrent": 115941376
+    },
+    {
+      "service": "devstack@file_tracker.service",
+      "MemoryCurrent": 2109440
+    },
+    {
+      "service": "devstack@g-api.service",
+      "MemoryCurrent": 1389064192
+    },
+    {
+      "service": "devstack@n-api.service",
+      "MemoryCurrent": 333959168
+    },
+    {
+      "service": "devstack@neutron-periodic-workers.service",
+      "MemoryCurrent": 217071616
+    },
+    {
+      "service": "devstack@placement-api.service",
+      "MemoryCurrent": 220733440
+    },
+    {
+      "service": "devstack@memory_tracker.service",
+      "MemoryCurrent": 2609152
+    },
+    {
+      "service": "devstack@n-api-meta.service",
+      "MemoryCurrent": 273256448
+    },
+    {
+      "service": "devstack@neutron-ovn-maintenance-worker.service",
+      "MemoryCurrent": 259883008
+    },
+    {
+      "service": "devstack@n-novnc-cell1.service",
+      "MemoryCurrent": 125857792
+    },
+    {
+      "service": "devstack@n-sch.service",
+      "MemoryCurrent": 190046208
+    },
+    {
+      "service": "devstack@q-ovn-agent.service",
+      "MemoryCurrent": 281460736
+    },
+    {
+      "service": "devstack@m-api.service",
+      "MemoryCurrent": 260972544
+    },
+    {
+      "service": "devstack@n-super-cond.service",
+      "MemoryCurrent": 190021632
+    },
+    {
+      "service": "devstack@keystone.service",
+      "MemoryCurrent": 354140160
+    },
+    {
+      "service": "apache2.service",
+      "MemoryCurrent": 17784832
+    }
+  ],
+  "db": [
+    {
+      "db": "placement",
+      "op": "SELECT",
+      "count": 4
+    },
+    {
+      "db": "nova_cell0",
+      "op": "UPDATE",
+      "count": 3
+    },
+    {
+      "db": "nova_cell0",
+      "op": "SELECT",
+      "count": 4
+    },
+    {
+      "db": "nova_cell1",
+      "op": "UPDATE",
+      "count": 13
+    },
+    {
+      "db": "nova_cell1",
+      "op": "SELECT",
+      "count": 17
+    },
+    {
+      "db": "manila",
+      "op": "RELEASE",
+      "count": 2
+    },
+    {
+      "db": "manila",
+      "op": "INSERT",
+      "count": 5
+    },
+    {
+      "db": "manila",
+      "op": "SAVEPOINT",
+      "count": 2
+    },
+    {
+      "db": "manila",
+      "op": "SELECT",
+      "count": 9
+    },
+    {
+      "db": "neutron",
+      "op": "DELETE",
+      "count": 1
+    },
+    {
+      "db": "neutron",
+      "op": "SELECT",
+      "count": 10
+    },
+    {
+      "db": "neutron",
+      "op": "UPDATE",
+      "count": 6
+    }
+  ],
+  "processes": [
+    {
+      "cmd": "/usr/lib/erlang/erts-15.2.7.4/bin/beam.smp",
+      "pid": 21354,
+      "args": "-W w -MBas ageffcbf -MHas ageffcbf -MBlmbcs 512 -MHlmbcs 512 -MMmcs 30 -pc unicode -P 1048576 -t 5000000 -stbt db -zdbbl 128000 -sbwt none -sbwtdcpu none -sbwtdio none -- -root /usr/lib/erlang -bindir /usr/lib/erlang/erts-15.2.7.4/bin -progname erl -- -home /var/lib/rabbitmq -- -pa  -noshell -noinput -s rabbit boot -boot start_sasl -syslog logger [] -syslog syslog_error_logger false -kernel prevent_overlapping_partitions false --",
+      "rss": 114556928,
+      "rss_peak": 135213056,
+      "rss_anon": 69390336,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/lib/os_mon-2.10.1/priv/bin/memsup",
+      "pid": 21397,
+      "args": "",
+      "rss": 1789952,
+      "rss_peak": 1789952,
+      "rss_anon": 94208,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/lib/os_mon-2.10.1/priv/bin/cpu_sup",
+      "pid": 21398,
+      "args": "",
+      "rss": 1789952,
+      "rss_peak": 1789952,
+      "rss_anon": 94208,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/erts-15.2.7.4/bin/inet_gethost",
+      "pid": 21400,
+      "args": "4",
+      "rss": 2322432,
+      "rss_peak": 2322432,
+      "rss_anon": 110592,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/erts-15.2.7.4/bin/inet_gethost",
+      "pid": 21401,
+      "args": "4",
+      "rss": 1609728,
+      "rss_peak": 1609728,
+      "rss_anon": 131072,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/sbin/mysqld",
+      "pid": 46835,
+      "args": "",
+      "rss": 674840576,
+      "rss_peak": 674840576,
+      "rss_anon": 626200576,
+      "swap": 0
+    },
+    {
+      "cmd": "/opt/stack/bin/etcd",
+      "pid": 49247,
+      "args": "--name np0000050384 --data-dir /opt/stack/data/etcd --initial-cluster-state new --initial-cluster-token etcd-cluster-01 --initial-cluster np0000050384=http://192.168.1.144:2380 --initial-advertise-peer-urls http://192.168.1.144:2380 --advertise-client-urls http://192.168.1.144:2379 --listen-peer-urls http://0.0.0.0:2380 --listen-client-urls http://192.168.1.144:2379 --log-level=debug",
+      "rss": 28741632,
+      "rss_peak": 28741632,
+      "rss_anon": 7946240,
+      "swap": 0
+    },
+    {
+      "cmd": "keystoneuWSGI",
+      "pid": 50476,
+      "args": "master",
+      "rss": 19259392,
+      "rss_peak": 19259392,
+      "rss_anon": 6664192,
+      "swap": 0
+    },
+    {
+      "cmd": "keystoneuWSGI",
+      "pid": 50477,
+      "args": "worker 1",
+      "rss": 199491584,
+      "rss_peak": 199491584,
+      "rss_anon": 169345024,
+      "swap": 0
+    },
+    {
+      "cmd": "keystoneuWSGI",
+      "pid": 50478,
+      "args": "worker 2",
+      "rss": 199233536,
+      "rss_peak": 199233536,
+      "rss_anon": 168898560,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-apiuWSGI",
+      "pid": 73249,
+      "args": "master",
+      "rss": 19259392,
+      "rss_peak": 19259392,
+      "rss_anon": 6656000,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-apiuWSGI",
+      "pid": 73250,
+      "args": "worker 1",
+      "rss": 195530752,
+      "rss_peak": 195530752,
+      "rss_anon": 164306944,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-apiuWSGI",
+      "pid": 73251,
+      "args": "worker 2",
+      "rss": 194867200,
+      "rss_peak": 194867200,
+      "rss_anon": 163577856,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-ovn-agent: ServiceWrapper worker(0)",
+      "pid": 76600,
+      "args": "                                                                                       ",
+      "rss": 164605952,
+      "rss_peak": 164605952,
+      "rss_anon": 152080384,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-apiuWSGI",
+      "pid": 76611,
+      "args": "master",
+      "rss": 19292160,
+      "rss_peak": 19292160,
+      "rss_anon": 6668288,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-apiuWSGI",
+      "pid": 76614,
+      "args": "worker 1",
+      "rss": 265228288,
+      "rss_peak": 265228288,
+      "rss_anon": 234815488,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-apiuWSGI",
+      "pid": 76615,
+      "args": "worker 2",
+      "rss": 282238976,
+      "rss_peak": 282238976,
+      "rss_anon": 251830272,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/local/bin/privsep-helper",
+      "pid": 77054,
+      "args": "--config-file /etc/neutron/plugins/ml2/ovn_agent.ini --privsep_context neutron.privileged.namespace_cmd --privsep_sock_path /tmp/tmpqjsm_x9v/privsep.sock",
+      "rss": 63606784,
+      "rss_peak": 63606784,
+      "rss_anon": 53653504,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-server:",
+      "pid": 78201,
+      "args": "rpc worker (/opt/stack/data/venv/bin/python3.14 /opt/stack/data/venv/bin/neutron-rpc-server --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini)",
+      "rss": 176418816,
+      "rss_peak": 176418816,
+      "rss_anon": 164306944,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-server:",
+      "pid": 78220,
+      "args": "rpc worker (/opt/stack/data/venv/bin/python3.14 /opt/stack/data/venv/bin/neutron-rpc-server --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini)",
+      "rss": 176431104,
+      "rss_peak": 176431104,
+      "rss_anon": 164319232,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-server:",
+      "pid": 78892,
+      "args": "services worker (/opt/stack/data/venv/bin/python3.14 /opt/stack/data/venv/bin/neutron-periodic-workers --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini)",
+      "rss": 185794560,
+      "rss_peak": 185794560,
+      "rss_anon": 172654592,
+      "swap": 0
+    },
+    {
+      "cmd": "placementuWSGI",
+      "pid": 79053,
+      "args": "master",
+      "rss": 19263488,
+      "rss_peak": 19263488,
+      "rss_anon": 6664192,
+      "swap": 0
+    },
+    {
+      "cmd": "placementuWSGI",
+      "pid": 79054,
+      "args": "worker 1",
+      "rss": 137281536,
+      "rss_peak": 137281536,
+      "rss_anon": 107724800,
+      "swap": 0
+    },
+    {
+      "cmd": "placementuWSGI",
+      "pid": 79055,
+      "args": "worker 2",
+      "rss": 137441280,
+      "rss_peak": 137441280,
+      "rss_anon": 107888640,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-server:",
+      "pid": 79119,
+      "args": "maintenance worker (/opt/stack/data/venv/bin/python3.14 /opt/stack/data/venv/bin/neutron-ovn-maintenance-worker --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini)",
+      "rss": 216174592,
+      "rss_peak": 216174592,
+      "rss_anon": 202608640,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/local/bin/privsep-helper",
+      "pid": 79913,
+      "args": "--config-file /etc/neutron/plugins/ml2/ovn_agent.ini --privsep_context neutron.privileged.default --privsep_sock_path /tmp/tmpbrq9dke2/privsep.sock",
+      "rss": 64544768,
+      "rss_peak": 64544768,
+      "rss_anon": 54431744,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-api-metauWSGI",
+      "pid": 81914,
+      "args": "master",
+      "rss": 19308544,
+      "rss_peak": 19308544,
+      "rss_anon": 6668288,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-api-metauWSGI",
+      "pid": 81915,
+      "args": "worker 1",
+      "rss": 163610624,
+      "rss_peak": 163610624,
+      "rss_anon": 133992448,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-api-metauWSGI",
+      "pid": 81916,
+      "args": "worker 2",
+      "rss": 163393536,
+      "rss_peak": 163393536,
+      "rss_anon": 133791744,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-api-metauWSGI",
+      "pid": 81917,
+      "args": "http 1",
+      "rss": 7901184,
+      "rss_peak": 7901184,
+      "rss_anon": 6680576,
+      "swap": 0
+    },
+    {
+      "cmd": "/opt/stack/data/venv/bin/nova-novncproxy",
+      "pid": 82597,
+      "args": "--config-file /etc/nova/nova_cell1.conf --web /usr/share/novnc",
+      "rss": 164024320,
+      "rss_peak": 164024320,
+      "rss_anon": 124903424,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-scheduler: ServiceWrapper worker(0)",
+      "pid": 82778,
+      "args": "                                                                    ",
+      "rss": 144318464,
+      "rss_peak": 144318464,
+      "rss_anon": 131248128,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-scheduler: ServiceWrapper worker(1)",
+      "pid": 82794,
+      "args": "                                                                    ",
+      "rss": 144351232,
+      "rss_peak": 144351232,
+      "rss_anon": 131280896,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-conductor: ServiceWrapper worker(0)",
+      "pid": 85158,
+      "args": "                                                                          ",
+      "rss": 146460672,
+      "rss_peak": 146460672,
+      "rss_anon": 133025792,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-conductor: ServiceWrapper worker(1)",
+      "pid": 85160,
+      "args": "                                                                          ",
+      "rss": 145928192,
+      "rss_peak": 145928192,
+      "rss_anon": 132493312,
+      "swap": 0
+    },
+    {
+      "cmd": "/opt/stack/data/venv/bin/nova-compute",
+      "pid": 85179,
+      "args": "--config-file /etc/nova/nova-cpu.conf",
+      "rss": 212545536,
+      "rss_peak": 213757952,
+      "rss_anon": 164958208,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-conductor: ServiceWrapper worker(0)",
+      "pid": 85202,
+      "args": "                                                                    ",
+      "rss": 146038784,
+      "rss_peak": 146038784,
+      "rss_anon": 132870144,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-conductor: ServiceWrapper worker(1)",
+      "pid": 85219,
+      "args": "                                                                    ",
+      "rss": 145993728,
+      "rss_peak": 145993728,
+      "rss_anon": 132825088,
+      "swap": 0
+    },
+    {
+      "cmd": "glance-apiuWSGI",
+      "pid": 86125,
+      "args": "master",
+      "rss": 19386368,
+      "rss_peak": 19386368,
+      "rss_anon": 6664192,
+      "swap": 0
+    },
+    {
+      "cmd": "glance-apiuWSGI",
+      "pid": 86131,
+      "args": "worker 1",
+      "rss": 175456256,
+      "rss_peak": 175456256,
+      "rss_anon": 144191488,
+      "swap": 0
+    },
+    {
+      "cmd": "glance-apiuWSGI",
+      "pid": 86132,
+      "args": "worker 2",
+      "rss": 176001024,
+      "rss_peak": 176001024,
+      "rss_anon": 144740352,
+      "swap": 0
+    },
+    {
+      "cmd": "manila-apiuWSGI",
+      "pid": 89139,
+      "args": "master",
+      "rss": 19247104,
+      "rss_peak": 19247104,
+      "rss_anon": 6660096,
+      "swap": 0
+    },
+    {
+      "cmd": "manila-apiuWSGI",
+      "pid": 89140,
+      "args": "worker 1",
+      "rss": 154206208,
+      "rss_peak": 154206208,
+      "rss_anon": 124678144,
+      "swap": 0
+    },
+    {
+      "cmd": "manila-apiuWSGI",
+      "pid": 89141,
+      "args": "worker 2",
+      "rss": 154136576,
+      "rss_peak": 154136576,
+      "rss_anon": 124616704,
+      "swap": 0
+    },
+    {
+      "cmd": "manila-scheduler: ServiceWrapper worker(0)",
+      "pid": 96894,
+      "args": "                                                                        ",
+      "rss": 126541824,
+      "rss_peak": 126541824,
+      "rss_anon": 112021504,
+      "swap": 0
+    },
+    {
+      "cmd": "manila-data: ServiceWrapper worker(0)",
+      "pid": 97671,
+      "args": "                                                                        ",
+      "rss": 120815616,
+      "rss_peak": 120815616,
+      "rss_anon": 106504192,
+      "swap": 0
+    },
+    {
+      "cmd": "manila-share: ServiceWrapper worker(0)",
+      "pid": 97940,
+      "args": "                                                                        ",
+      "rss": 183037952,
+      "rss_peak": 183037952,
+      "rss_anon": 169127936,
+      "swap": 0
+    }
+  ],
+  "api": [
+    {
+      "service": "identity",
+      "log": "access.log",
+      "largest": 3654,
+      "openstacksdk-GET": 662,
+      "openstacksdk-POST": 227,
+      "openstacksdk-PUT": 26,
+      "neutron-GET": 2,
+      "neutron-POST": 2,
+      "keystoneclient-GET": 7,
+      "nova-scheduler-GET": 1,
+      "nova-scheduler-POST": 1,
+      "nova-conductor-GET": 2,
+      "nova-conductor-POST": 2,
+      "nova-compute-GET": 1,
+      "nova-compute-POST": 1,
+      "nova-GET": 1,
+      "nova-POST": 1,
+      "glance-GET": 1,
+      "glance-POST": 1,
+      "placement-GET": 1,
+      "placement-POST": 1,
+      "manila-GET": 1,
+      "manila-POST": 1,
+      "tempest-POST": 6,
+      "tempest-GET": 3,
+      "tempest-PUT": 1,
+      "tempest-DELETE": 2
+    },
+    {
+      "service": "networking",
+      "log": "access.log",
+      "largest": 17183,
+      "Wget-GET": 1,
+      "openstacksdk-GET": 70,
+      "openstacksdk-POST": 20,
+      "openstacksdk-PUT": 3,
+      "tempest-GET": 2,
+      "tempest-DELETE": 1
+    },
+    {
+      "service": "placement",
+      "log": "access.log",
+      "largest": 2334,
+      "nova-scheduler-GET": 1,
+      "nova-conductor-GET": 2,
+      "nova-compute-GET": 8,
+      "nova-compute-POST": 1,
+      "nova-compute-PUT": 2
+    },
+    {
+      "service": "compute",
+      "log": "access.log",
+      "largest": 5103,
+      "openstacksdk-GET": 7,
+      "openstacksdk-POST": 26
+    },
+    {
+      "service": "image",
+      "log": "access.log",
+      "largest": 4214,
+      "openstacksdk-GET": 9,
+      "openstacksdk-POST": 4,
+      "openstacksdk-PUT": 4,
+      "tempest-GET": 1
+    },
+    {
+      "service": "share",
+      "log": "access.log",
+      "largest": 1167,
+      "manilaclient-GET": 5,
+      "manilaclient-POST": 4
+    },
+    {
+      "service": "identity",
+      "log": "tls-proxy_access.log",
+      "largest": 7367,
+      "openstacksdk-GET": 662,
+      "openstacksdk-POST": 227,
+      "openstacksdk-PUT": 26,
+      "neutron-GET": 2,
+      "neutron-POST": 2,
+      "keystoneclient-GET": 7,
+      "nova-scheduler-GET": 1,
+      "nova-scheduler-POST": 1,
+      "nova-conductor-GET": 2,
+      "nova-conductor-POST": 2,
+      "nova-compute-GET": 1,
+      "nova-compute-POST": 1,
+      "nova-GET": 1,
+      "nova-POST": 1,
+      "glance-GET": 1,
+      "glance-POST": 1,
+      "placement-GET": 1,
+      "placement-POST": 1,
+      "manila-GET": 1,
+      "manila-POST": 1,
+      "tempest-POST": 6,
+      "tempest-GET": 3,
+      "tempest-PUT": 1,
+      "tempest-DELETE": 2
+    },
+    {
+      "service": "networking",
+      "log": "tls-proxy_access.log",
+      "largest": 20962,
+      "Wget-GET": 1,
+      "openstacksdk-GET": 70,
+      "openstacksdk-POST": 20,
+      "openstacksdk-PUT": 3,
+      "tempest-GET": 2,
+      "tempest-DELETE": 1
+    },
+    {
+      "service": "placement",
+      "log": "tls-proxy_access.log",
+      "largest": 6047,
+      "nova-scheduler-GET": 1,
+      "nova-conductor-GET": 2,
+      "nova-compute-GET": 8,
+      "nova-compute-POST": 1,
+      "nova-compute-PUT": 2
+    },
+    {
+      "service": "compute",
+      "log": "tls-proxy_access.log",
+      "largest": 8816,
+      "openstacksdk-GET": 7,
+      "openstacksdk-POST": 26
+    },
+    {
+      "service": "image",
+      "log": "tls-proxy_access.log",
+      "largest": 7927,
+      "openstacksdk-GET": 9,
+      "openstacksdk-POST": 4,
+      "openstacksdk-PUT": 4,
+      "tempest-GET": 1
+    },
+    {
+      "service": "share",
+      "log": "tls-proxy_access.log",
+      "largest": 4880,
+      "manilaclient-GET": 5,
+      "manilaclient-POST": 4
+    }
+  ],
+  "swap": {
+    "pswpin": 0,
+    "pswpout": 2,
+    "zswpin": 0,
+    "zswpout": 20
+  },
+  "report": {
+    "timestamp": "2026-11-06T07:20:31.043875",
+    "hostname": "np0000050384",
+    "version": 2
+  }
+}
