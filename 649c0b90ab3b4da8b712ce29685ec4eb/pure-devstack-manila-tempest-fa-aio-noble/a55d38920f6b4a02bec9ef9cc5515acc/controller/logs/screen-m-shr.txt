@@ -1,0 +1,32 @@
+Nov 06 05:34:08.304082 np0000050356 systemd[1]: Started devstack@m-shr.service - Devstack devstack@m-shr.service.
+Nov 06 05:34:09.309396 np0000050356 manila-share[90103]: DEBUG oslo_concurrency.lockutils [-] Acquiring lock "singleton_lock" {{(pid=90103) lock /opt/stack/data/venv/lib/python3.12/site-packages/oslo_concurrency/lockutils.py:390}}
+Nov 06 05:34:09.309396 np0000050356 manila-share[90103]: DEBUG oslo_concurrency.lockutils [-] Acquired lock "singleton_lock" {{(pid=90103) lock /opt/stack/data/venv/lib/python3.12/site-packages/oslo_concurrency/lockutils.py:393}}
+Nov 06 05:34:09.309396 np0000050356 manila-share[90103]: DEBUG oslo_concurrency.lockutils [-] Releasing lock "singleton_lock" {{(pid=90103) lock /opt/stack/data/venv/lib/python3.12/site-packages/oslo_concurrency/lockutils.py:413}}
+Nov 06 05:34:09.465860 np0000050356 manila-share[90103]: INFO oslo_service.periodic_task [-] Skipping periodic task update_share_usage_size because it is disabled
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: CRITICAL manila [None req-d3037a95-3ac4-47f9-9b6f-9b0e60d084a3 None None] Unhandled error: ModuleNotFoundError: No module named 'manila.share.drivers.everpure'
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila Traceback (most recent call last):
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila   File "/opt/stack/data/venv/bin/manila-share", line 6, in <module>
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila     sys.exit(main())
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila              ^^^^^^
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila   File "/opt/stack/manila/manila/cmd/share.py", line 47, in main
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila     server = service.Service.create(host=host,
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila   File "/opt/stack/manila/manila/service.py", line 232, in create
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila     service_obj = cls(host, binary, topic, manager,
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila   File "/opt/stack/manila/manila/service.py", line 124, in __init__
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila     self.manager = manager_class(host=self.host,
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila   File "/opt/stack/manila/manila/share/manager.py", line 314, in __init__
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila     self.driver = importutils.import_object(
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila   File "/opt/stack/data/venv/lib/python3.12/site-packages/oslo_utils/importutils.py", line 46, in import_object
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila     return import_class(import_str)(*args, **kwargs)
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila            ^^^^^^^^^^^^^^^^^^^^^^^^
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila   File "/opt/stack/data/venv/lib/python3.12/site-packages/oslo_utils/importutils.py", line 31, in import_class
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila     __import__(mod_str)
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila ModuleNotFoundError: No module named 'manila.share.drivers.everpure'
+Nov 06 05:34:09.468543 np0000050356 manila-share[90103]: ERROR manila 
+Nov 06 05:34:09.831138 np0000050356 systemd[1]: devstack@m-shr.service: Main process exited, code=exited, status=1/FAILURE
+Nov 06 05:34:09.831149 np0000050356 systemd[1]: devstack@m-shr.service: Failed with result 'exit-code'.
+Nov 06 05:34:09.831337 np0000050356 systemd[1]: devstack@m-shr.service: Consumed 1.325s CPU time, 89.3M memory peak, 0B memory swap peak.
