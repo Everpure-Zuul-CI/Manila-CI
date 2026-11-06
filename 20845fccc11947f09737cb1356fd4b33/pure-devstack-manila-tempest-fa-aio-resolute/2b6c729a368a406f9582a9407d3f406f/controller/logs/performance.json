@@ -1,0 +1,410 @@
+{
+  "services": [
+    {
+      "service": "devstack@q-ovn-agent.service",
+      "MemoryCurrent": 211099648
+    },
+    {
+      "service": "devstack@dstat.service",
+      "MemoryCurrent": 31330304
+    },
+    {
+      "service": "devstack@n-api.service",
+      "MemoryCurrent": 327286784
+    },
+    {
+      "service": "devstack@file_tracker.service",
+      "MemoryCurrent": 1822720
+    },
+    {
+      "service": "devstack@etcd.service",
+      "MemoryCurrent": 137064448
+    },
+    {
+      "service": "devstack@openstack-cli-server.service",
+      "MemoryCurrent": 113258496
+    },
+    {
+      "service": "devstack@memory_tracker.service",
+      "MemoryCurrent": 2338816
+    },
+    {
+      "service": "devstack@keystone.service",
+      "MemoryCurrent": 351698944
+    },
+    {
+      "service": "devstack@neutron-api.service",
+      "MemoryCurrent": 361816064
+    },
+    {
+      "service": "devstack@neutron-periodic-workers.service",
+      "MemoryCurrent": 162988032
+    },
+    {
+      "service": "devstack@neutron-rpc-server.service",
+      "MemoryCurrent": 196890624
+    },
+    {
+      "service": "devstack@neutron-ovn-maintenance-worker.service",
+      "MemoryCurrent": 288956416
+    },
+    {
+      "service": "devstack@placement-api.service",
+      "MemoryCurrent": 218075136
+    },
+    {
+      "service": "apache2.service",
+      "MemoryCurrent": 17952768
+    }
+  ],
+  "db": [
+    {
+      "db": "keystone",
+      "op": "SELECT",
+      "count": 20873
+    },
+    {
+      "db": "keystone",
+      "op": "INSERT",
+      "count": 89
+    },
+    {
+      "db": "keystone",
+      "op": "UPDATE",
+      "count": 3
+    },
+    {
+      "db": "nova_api",
+      "op": "SELECT",
+      "count": 2
+    },
+    {
+      "db": "nova_cell1",
+      "op": "SELECT",
+      "count": 2
+    },
+    {
+      "db": "nova_cell0",
+      "op": "SELECT",
+      "count": 6
+    },
+    {
+      "db": "nova_cell0",
+      "op": "INSERT",
+      "count": 2
+    },
+    {
+      "db": "placement",
+      "op": "SELECT",
+      "count": 4
+    },
+    {
+      "db": "placement",
+      "op": "INSERT",
+      "count": 2
+    },
+    {
+      "db": "placement",
+      "op": "SET",
+      "count": 1
+    },
+    {
+      "db": "neutron",
+      "op": "DELETE",
+      "count": 4
+    },
+    {
+      "db": "neutron",
+      "op": "INSERT",
+      "count": 31
+    },
+    {
+      "db": "neutron",
+      "op": "SELECT",
+      "count": 391
+    },
+    {
+      "db": "neutron",
+      "op": "UPDATE",
+      "count": 15
+    }
+  ],
+  "processes": [
+    {
+      "cmd": "/usr/lib/erlang/erts-15.2.7.4/bin/beam.smp",
+      "pid": 21342,
+      "args": "-W w -MBas ageffcbf -MHas ageffcbf -MBlmbcs 512 -MHlmbcs 512 -MMmcs 30 -pc unicode -P 1048576 -t 5000000 -stbt db -zdbbl 128000 -sbwt none -sbwtdcpu none -sbwtdio none -- -root /usr/lib/erlang -bindir /usr/lib/erlang/erts-15.2.7.4/bin -progname erl -- -home /var/lib/rabbitmq -- -pa  -noshell -noinput -s rabbit boot -boot start_sasl -syslog logger [] -syslog syslog_error_logger false -kernel prevent_overlapping_partitions false --",
+      "rss": 111886336,
+      "rss_peak": 129671168,
+      "rss_anon": 66629632,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/lib/os_mon-2.10.1/priv/bin/memsup",
+      "pid": 21385,
+      "args": "",
+      "rss": 1789952,
+      "rss_peak": 1789952,
+      "rss_anon": 94208,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/lib/os_mon-2.10.1/priv/bin/cpu_sup",
+      "pid": 21386,
+      "args": "",
+      "rss": 1798144,
+      "rss_peak": 1798144,
+      "rss_anon": 102400,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/erts-15.2.7.4/bin/inet_gethost",
+      "pid": 21388,
+      "args": "4",
+      "rss": 2363392,
+      "rss_peak": 2363392,
+      "rss_anon": 114688,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/lib/erlang/erts-15.2.7.4/bin/inet_gethost",
+      "pid": 21389,
+      "args": "4",
+      "rss": 1613824,
+      "rss_peak": 1613824,
+      "rss_anon": 135168,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/sbin/mysqld",
+      "pid": 46834,
+      "args": "",
+      "rss": 638525440,
+      "rss_peak": 638525440,
+      "rss_anon": 590278656,
+      "swap": 0
+    },
+    {
+      "cmd": "/opt/stack/bin/etcd",
+      "pid": 49247,
+      "args": "--name np0000050526 --data-dir /opt/stack/data/etcd --initial-cluster-state new --initial-cluster-token etcd-cluster-01 --initial-cluster np0000050526=http://192.168.1.129:2380 --initial-advertise-peer-urls http://192.168.1.129:2380 --advertise-client-urls http://192.168.1.129:2379 --listen-peer-urls http://0.0.0.0:2380 --listen-client-urls http://192.168.1.129:2379 --log-level=debug",
+      "rss": 29564928,
+      "rss_peak": 29564928,
+      "rss_anon": 8151040,
+      "swap": 0
+    },
+    {
+      "cmd": "keystoneuWSGI",
+      "pid": 50476,
+      "args": "master",
+      "rss": 19374080,
+      "rss_peak": 19374080,
+      "rss_anon": 6664192,
+      "swap": 0
+    },
+    {
+      "cmd": "keystoneuWSGI",
+      "pid": 50477,
+      "args": "worker 1",
+      "rss": 199643136,
+      "rss_peak": 199643136,
+      "rss_anon": 168923136,
+      "swap": 0
+    },
+    {
+      "cmd": "keystoneuWSGI",
+      "pid": 50478,
+      "args": "worker 2",
+      "rss": 199974912,
+      "rss_peak": 199974912,
+      "rss_anon": 169332736,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-apiuWSGI",
+      "pid": 73186,
+      "args": "master",
+      "rss": 19243008,
+      "rss_peak": 19243008,
+      "rss_anon": 6656000,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-apiuWSGI",
+      "pid": 73187,
+      "args": "worker 1",
+      "rss": 192045056,
+      "rss_peak": 192045056,
+      "rss_anon": 160882688,
+      "swap": 0
+    },
+    {
+      "cmd": "nova-apiuWSGI",
+      "pid": 73188,
+      "args": "worker 2",
+      "rss": 191746048,
+      "rss_peak": 191746048,
+      "rss_anon": 160768000,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-ovn-agent: ServiceWrapper worker(0)",
+      "pid": 76510,
+      "args": "                                                                                       ",
+      "rss": 149405696,
+      "rss_peak": 149405696,
+      "rss_anon": 136916992,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-apiuWSGI",
+      "pid": 76546,
+      "args": "master",
+      "rss": 19304448,
+      "rss_peak": 19304448,
+      "rss_anon": 6668288,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-apiuWSGI",
+      "pid": 76548,
+      "args": "worker 1",
+      "rss": 223072256,
+      "rss_peak": 223072256,
+      "rss_anon": 192565248,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-apiuWSGI",
+      "pid": 76549,
+      "args": "worker 2",
+      "rss": 186150912,
+      "rss_peak": 186150912,
+      "rss_anon": 157790208,
+      "swap": 0
+    },
+    {
+      "cmd": "/usr/local/bin/privsep-helper",
+      "pid": 76987,
+      "args": "--config-file /etc/neutron/plugins/ml2/ovn_agent.ini --privsep_context neutron.privileged.namespace_cmd --privsep_sock_path /tmp/tmpu8kxqvc4/privsep.sock",
+      "rss": 63606784,
+      "rss_peak": 63606784,
+      "rss_anon": 53653504,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-server:",
+      "pid": 78109,
+      "args": "rpc worker (/opt/stack/data/venv/bin/python3.14 /opt/stack/data/venv/bin/neutron-rpc-server --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini)",
+      "rss": 162516992,
+      "rss_peak": 162516992,
+      "rss_anon": 150474752,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-server:",
+      "pid": 78112,
+      "args": "rpc worker (/opt/stack/data/venv/bin/python3.14 /opt/stack/data/venv/bin/neutron-rpc-server --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini)",
+      "rss": 162521088,
+      "rss_peak": 162521088,
+      "rss_anon": 150478848,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-server:",
+      "pid": 78295,
+      "args": "services worker (/opt/stack/data/venv/bin/python3.14 /opt/stack/data/venv/bin/neutron-periodic-workers --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini)",
+      "rss": 154279936,
+      "rss_peak": 154279936,
+      "rss_anon": 147390464,
+      "swap": 0
+    },
+    {
+      "cmd": "neutron-server:",
+      "pid": 78922,
+      "args": "maintenance worker (/opt/stack/data/venv/bin/python3.14 /opt/stack/data/venv/bin/neutron-ovn-maintenance-worker --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini)",
+      "rss": 191356928,
+      "rss_peak": 191356928,
+      "rss_anon": 177008640,
+      "swap": 0
+    },
+    {
+      "cmd": "placementuWSGI",
+      "pid": 79003,
+      "args": "master",
+      "rss": 19320832,
+      "rss_peak": 19320832,
+      "rss_anon": 6664192,
+      "swap": 0
+    },
+    {
+      "cmd": "placementuWSGI",
+      "pid": 79004,
+      "args": "worker 1",
+      "rss": 135602176,
+      "rss_peak": 135602176,
+      "rss_anon": 106373120,
+      "swap": 0
+    },
+    {
+      "cmd": "placementuWSGI",
+      "pid": 79005,
+      "args": "worker 2",
+      "rss": 135503872,
+      "rss_peak": 135503872,
+      "rss_anon": 106344448,
+      "swap": 0
+    }
+  ],
+  "api": [
+    {
+      "service": "identity",
+      "log": "access.log",
+      "largest": 3585,
+      "openstacksdk-GET": 587,
+      "openstacksdk-POST": 153,
+      "openstacksdk-PUT": 26,
+      "neutron-GET": 1,
+      "neutron-POST": 1,
+      "keystoneclient-GET": 1
+    },
+    {
+      "service": "networking",
+      "log": "access.log",
+      "largest": 910,
+      "Wget-GET": 2,
+      "openstacksdk-GET": 2,
+      "openstacksdk-POST": 1
+    },
+    {
+      "service": "identity",
+      "log": "tls-proxy_access.log",
+      "largest": 7298,
+      "openstacksdk-GET": 587,
+      "openstacksdk-POST": 153,
+      "openstacksdk-PUT": 26,
+      "neutron-GET": 1,
+      "neutron-POST": 1,
+      "keystoneclient-GET": 1
+    },
+    {
+      "service": "networking",
+      "log": "tls-proxy_access.log",
+      "largest": 4623,
+      "Wget-GET": 2,
+      "openstacksdk-GET": 2,
+      "openstacksdk-POST": 1
+    }
+  ],
+  "swap": {
+    "pswpin": 0,
+    "pswpout": 2,
+    "zswpin": 0,
+    "zswpout": 21
+  },
+  "report": {
+    "timestamp": "2026-11-06T23:10:36.796953",
+    "hostname": "np0000050526",
+    "version": 2
+  }
+}
