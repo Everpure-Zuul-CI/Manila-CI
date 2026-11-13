@@ -1,0 +1,13 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh nwfilter-edit no-ip-multicast
+or other application using the libvirt API.
+-->
+
+<filter name='no-ip-multicast' chain='ipv4' priority='-700'>
+  <uuid>6349a049-fcf1-4f79-9365-a433e4f3cf4e</uuid>
+  <rule action='drop' direction='out' priority='500'>
+    <ip dstipaddr='224.0.0.0' dstipmask='4'/>
+  </rule>
+</filter>
